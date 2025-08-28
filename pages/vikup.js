@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
 import SEOHead from '../components/SEOHead'
+import Breadcrumbs from '../components/Breadcrumbs'
 import { getSEOData } from '../utils/seoConfig'
 import { getServiceData, getLocalBusinessData } from '../utils/structuredData'
 
@@ -28,6 +29,7 @@ const Vikup = (props) => {
           structuredData={structuredData}
         />
         <Header />
+        <Breadcrumbs />
         <div className="page1-headertextwashermachine">
           <img
             alt="image"

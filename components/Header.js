@@ -685,7 +685,7 @@ const Header = () => {
           }
 
           .frame1196-burger-open .frame1196-burger-line:nth-child(1) {
-            transform: rotate(45deg) translate(7px, 7px);
+            transform: rotate(45deg) translate(6px, 6px);
           }
 
           .frame1196-burger-open .frame1196-burger-line:nth-child(2) {
@@ -693,10 +693,10 @@ const Header = () => {
           }
 
           .frame1196-burger-open .frame1196-burger-line:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(6px, -6px);
           }
 
-          /* Стили для боковой панели */
+          /* Сти��и для боковой панели */
           .frame1196-sidebar {
             position: fixed;
             top: 0;
@@ -897,15 +897,37 @@ const Header = () => {
           }
 
           /* Медиа-запросы */
-          @media (max-width: 1525px) {
+          @media (max-width: 1700px) {
+            .frame1196-korobki {
+              display: none;
+            }
+            .frame1196-burger-menu {
+              display: flex;
+            }
+            .frame1196-container104 {
+              gap: 8px;
+              width: auto;
+              height: 62px;
+              display: flex;
+              align-items: center;
+              border-radius: 8px;
+              justify-content: flex-end;
+              background-color: transparent;
+            }
+            .frame1196-image11 {
+              display: none;
+            }
+          }
+
+          @media (max-width: 1150px) {
             .frame1196-container103 {
               gap: calc(var(--dl-layout-space-oneandhalfunits) + 10px);
               width: 340px;
               padding: 0 15px;
             }
             .frame1196-container104 {
-              gap: var(--dl-layout-space-twounits);
-              width: 183px;
+              gap: 16px;
+              width: 120px;
               height: 62px;
               display: flex;
               align-items: center;
@@ -913,16 +935,14 @@ const Header = () => {
               justify-content: center;
               background-color: rgba(46, 51, 55, 0.41);
             }
+            .frame1196-obshiy {
+              display: none;
+            }
             .frame1196-image11 {
               width: 30px;
               object-fit: cover;
               animation: phoneAnimation 5s infinite;
-            }
-            .frame1196-burger-menu {
-              display: flex;
-            }
-            .frame1196-obshiy {
-              display: none;
+              display: block;
             }
           }
 
