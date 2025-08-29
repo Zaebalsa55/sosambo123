@@ -8,6 +8,7 @@ import PageNavigation from '../components/PageNavigation'
 import OrderButton from '../components/OrderButton'
 import OrderModal from '../components/OrderModal'
 import Breadcrumbs from '../components/Breadcrumbs'
+import RelatedArticles from '../components/RelatedArticles'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
@@ -40,9 +41,9 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
-        <Breadcrumbs style="white-left" />
         <main className="page-main">
           <div className="page-left-main-box">
+            <Breadcrumbs style="white-left" />
             <div className="page-headertextwashermachine">
               <h1 className="page-text10">
                 <span className="page-text11">
@@ -155,7 +156,7 @@ const Page = (props) => {
                     className="page-vector4"
                   />
                   <a href="#4" className="page-link5 ge">
-                    3. Засор в сливной системе или неисправность датчика уровня (прессостат).
+                    3. Засор в сливной системе или неиспр��вность датчика уровня (прессостат).
                   </a>
                 </li>
                 <li className="page-li6 list-item">
@@ -446,7 +447,7 @@ const Page = (props) => {
               <div className="page-container26">
                 <p className="page-text49 vicetext">
                   {' '}
-                  Износ или поломка механики з��мка, сломанная ручка или повреждённый фиксатор — частая причина невозможно��ти от��рытия люка. При такой неисправности замок может не фиксироваться или проворачиваться «в холостую», и потребуется замена механизма или ручки: это уже профильная работа для мастера.
+                  Износ или поломка механики з��мка, сломанная ручка или повреждённый фиксатор — частая причина невозможно��ти от��рытия люка. При такой неисправн��сти замок может не фиксироваться или проворачиваться «в холостую», и потребуется замена механизма или ручки: это уже профильная работа для мастера.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -677,59 +678,7 @@ const Page = (props) => {
                 strokeDasharray="11 11"
               ></path>
             </svg>
-            <div className="page-container39">
-              <h4 className="page-text65">
-                <span>Другие статьи</span>
-                <br></br>
-              </h4>
-            </div>
-            <div className="page-container40">
-              <div className="page-container41">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823145-200h.png"
-                  loading="lazy"
-                  className="page-image38230321"
-                />
-                <span className="page-text68">
-                  Как избавиться от жирных пятен н�� одежде в домашних усло��иях?
-                </span>
-              </div>
-              <div className="page-container42">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823146-200h.png"
-                  loading="lazy"
-                  className="page-image38230322"
-                />
-                <span className="page-text69">
-                  Как уд��лить пятна крови с одежды без следов?
-                </span>
-              </div>
-              <div className="page-container43">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823147-200h.png"
-                  loading="lazy"
-                  className="page-image38230323"
-                />
-                <span className="page-text70">
-                  Как самостоятельно удалить жвачку с одежды?
-                </span>
-              </div>
-              <div className="page-container44">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823144-200h.png"
-                  loading="lazy"
-                  className="page-image38230324"
-                />
-                <span className="page-text71">
-                  Как правильно стирать пуховик в автоматической стиральной
-                  машине?
-                </span>
-              </div>
-            </div>
+            <RelatedArticles />
           </div>
           <div className="page-dops-info">
             <section className="page-frame1299">

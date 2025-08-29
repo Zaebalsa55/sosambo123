@@ -8,6 +8,7 @@ import PageNavigation from '../components/PageNavigation'
 import OrderButton from '../components/OrderButton'
 import OrderModal from '../components/OrderModal'
 import Breadcrumbs from '../components/Breadcrumbs'
+import RelatedArticles from '../components/RelatedArticles'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
@@ -40,9 +41,9 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
-        <Breadcrumbs style="white-left" />
         <main className="page-main">
           <div className="page-left-main-box">
+            <Breadcrumbs style="white-left" />
             <div className="page-headertextwashermachine">
               <h1 className="page-text10">
                 <span className="page-text11">
@@ -323,7 +324,7 @@ const Page = (props) => {
 
                   <p>
                     <strong>3. Ещё одна распростран��нная причина — неверные настройки.</strong><br />
-                    Убедитесь, что вы не выбрали режим без отжима, например «Полоскание без отжима» или «Деликатная стирка». В некоторых программах скорость вращения барабана снижена или отжим отключён полностью, чтобы не повредить ткани. Если это так, просто перезапустите стирку с нужным режимом.
+                    Убедитесь, что вы не выбрали режим без отжима, например ��Полоскание без отжима» или «Деликатная стирка». В некоторых программах скорость вращения барабана снижена или отжим отключён полностью, чтобы не повредить ткани. Если это так, просто перезапустите стирку с нужным режимом.
                   </p>
 
                   <p>
@@ -332,7 +333,7 @@ const Page = (props) => {
                   </p>
 
                   <p>
-                    <strong>5. Если все эти меры не помогли, попробуйте перезагрузить электронику.</strong><br />
+                    <strong>5. Если все эти меры не ��омогли, попробуйте перезагрузить электронику.</strong><br />
                     Выключите стиральную машину из розетки на 10–15 минут, затем включите снова и запустите короткий цикл. Иногда этого достаточно, чтобы сбросить сбой программы.
                   </p>
 
@@ -351,7 +352,7 @@ const Page = (props) => {
             <section id="2" className="page-thirdproblem1">
               <div className="page-container16 zagolovkiskorobkoy">
                 <h3 className="zagolovki2">
-                  1. Неисправен сли��ной насос (п��мпа)
+                  1. Неисправен сли��н��й насос (п��мпа)
                 </h3>
                 <svg
                   width="330"
@@ -386,7 +387,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Если пом��а сгорела или в ней слома��а крыльчатка, машина не сможет слить воду и п��реход к отж��му невозможен. При���наки: вода остаётся в баке, машинка гудит во время слива или совсем молчит, и часто появляется ошибка слива на дисплее. Самостоятельный ремонт насоса обычно невозможен.
+                  ��сли пом��а сгорела или в ней слома��а крыльчатка, машина не сможет слить воду и п��реход к отж��му невозможен. При���наки: вода остаётся в баке, машинка гудит во время слива или совсем молчит, и часто появляется ошибка слива на дисплее. Самостоятельный ремонт насоса обычно невозможен.
                 </p>
               </div>
             </section>
@@ -597,7 +598,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Если датчик оборотов выдаёт неверные пок��зани��, контроллер перестаёт доверять двигателю – стиральная машина может просто не давать команду на отжим. Это происходит без явных механически�� шумов, но при этом барабан либо вращается очень ��едленно, либо вообще не двигается. Решается заменой датчика.
+                  Если датчик оборотов выдаёт неверные пок��зани��, контроллер перестаёт доверять двигателю – стиральная машина может просто не давать команду на отжим. Это происходит без явных механически�� шумов, но при этом барабан либо вращается очень ��едленно, либо вообще не двигается. Решается замено�� датчика.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -828,59 +829,7 @@ const Page = (props) => {
                 strokeDasharray="11 11"
               ></path>
             </svg>
-            <div className="page-container39">
-              <h4 className="page-text65">
-                <span>Другие статьи</span>
-                <br></br>
-              </h4>
-            </div>
-            <div className="page-container40">
-              <div className="page-container41">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823145-200h.png"
-                  loading="lazy"
-                  className="page-image38230321"
-                />
-                <span className="page-text68">
-                  Как избавиться от жирных пятен н�� одежде в до��ашних условиях?
-                </span>
-              </div>
-              <div className="page-container42">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823146-200h.png"
-                  loading="lazy"
-                  className="page-image38230322"
-                />
-                <span className="page-text69">
-                  Как уд��лить пятна крови с одежды без следов?
-                </span>
-              </div>
-              <div className="page-container43">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823147-200h.png"
-                  loading="lazy"
-                  className="page-image38230323"
-                />
-                <span className="page-text70">
-                  Как самостоятельно удалить жвачку с одежды?
-                </span>
-              </div>
-              <div className="page-container44">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823144-200h.png"
-                  loading="lazy"
-                  className="page-image38230324"
-                />
-                <span className="page-text71">
-                  Как правильно стирать пуховик в автоматической стиральной
-                  машине?
-                </span>
-              </div>
-            </div>
+            <RelatedArticles />
           </div>
           <div className="page-dops-info">
             <section className="page-frame1299">

@@ -22,19 +22,34 @@ const OrderModal = ({ isOpen, onClose }) => {
     onClose()
   }
 
+  const formatUaPhone = (input) => {
+    const digits = (input || '').replace(/\D/g, '')
+    let rest = digits
+    if (rest.startsWith('380')) rest = rest.slice(3)
+    else if (rest.startsWith('80')) rest = rest.slice(2)
+    else if (rest.startsWith('0')) rest = rest.slice(1)
+    return rest.slice(0, 9)
+  }
+
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
+    if (name === 'phone') {
+      setFormData(prev => ({ ...prev, phone: formatUaPhone(value) }))
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }))
+    }
   }
 
   const handleSubmit = (e) => {
     if (e) e.preventDefault()
-    if (formData.name.trim() && formData.phone.trim()) {
-      // Здесь можно добавить логику отправки данных
-      alert(`Заявка принята! Мастер свяжется с вами в ближайшее вре��я.\nИмя: ${formData.name}\nТелефон: ${formData.phone}`)
+    const rest = (formData.phone || '').replace(/\D/g, '')
+    const isValidPhone = rest.length === 9
+    const fullPhone = `+380 ${rest}`
+    if (formData.name.trim() && isValidPhone) {
+      alert(`Заявка принята! Мастер свяжется с вами в ближайшее время.\nИмя: ${formData.name}\nТелефон: ${fullPhone}`)
       closeModal()
     } else {
-      alert('Пожалуйста, заполните все поля')
+      alert('Пожалуйста, введите корректный номер в формате +380XXXXXXXXX и заполните все поля')
     }
   }
 
@@ -65,13 +80,17 @@ const OrderModal = ({ isOpen, onClose }) => {
                   required
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group phone-input-group">
+                <span className="phone-prefix">+380</span>
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder="Номер телефона"
+                  inputMode="numeric"
+                  autoComplete="tel"
+                  pattern="\d{9}"
+                  maxLength={9}
                   className="form-input"
                   required
                 />
@@ -194,6 +213,19 @@ const OrderModal = ({ isOpen, onClose }) => {
           outline: none;
           font-family: 'Nunito', sans-serif;
         }
+        .phone-input-group { position: relative; }
+        .phone-input-group .form-input { padding-left: 74px; }
+        .phone-prefix {
+          position: absolute;
+          top: 50%;
+          left: 18px;
+          transform: translateY(-50%);
+          color: #999;
+          font-size: 18px;
+          font-family: 'Nunito', sans-serif;
+          pointer-events: none;
+        }
+        .phone-input-group:focus-within .phone-prefix { color: #000; }
 
         .form-input:focus {
           border-color: #4EC8ED;
@@ -255,6 +287,8 @@ const OrderModal = ({ isOpen, onClose }) => {
             padding: 11px;
             font-size: 15px;
           }
+          .phone-input-group .form-input { padding-left: 60px; }
+          .phone-prefix { left: 14px; font-size: 15px; }
 
           .form-input::placeholder {
             font-size: 15px;

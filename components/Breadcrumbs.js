@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) => {
   const router = useRouter()
   const pathname = router.pathname
+  const isLeft = style === 'white-left'
 
   // Определяем breadcrumbs на основе маршрута
   const getBreadcrumbs = () => {
@@ -29,7 +30,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
       '/neslivaetvodu': 'Стиральная машина не сливает воду',
       '/negreetvodu': 'Стиральная машина не греет воду',
       '/protekaet': 'Стиральная машина протекает',
-      '/silnoshumit': 'Стиральная машина шумит при отжиме',
+      '/silnoshumit': 'С��иральная машина шумит при отжиме',
       '/nevkluchaetsa': 'Стиральн��я машина не включается',
       '/zavisaetnaprogramme': 'Стиральная машина зависает на программе',
       '/neotjimaet': 'Стиральная машина не отжимает',
@@ -61,15 +62,15 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
 
   const breadcrumbs = getBreadcrumbs()
 
-  // Не показываем breadcrumbs на главной странице если там только один элемент
+  // Не показываем breadcrumbs на главной стр��нице если там только один элемент
   if (breadcrumbs.length <= 1) {
     return null
   }
 
   return (
     <nav className={`breadcrumbs-container ${style} ${className}`}>
-      <div className="breadcrumbs-wrapper">
-        <ol className="breadcrumbs-list">
+      <div className={`breadcrumbs-wrapper ${isLeft ? 'left' : ''}`}>
+        <ol className={`breadcrumbs-list ${isLeft ? 'align-left' : ''}`}>
           {breadcrumbs.map((item, index) => (
             <li key={index} className="breadcrumb-item">
               {index < breadcrumbs.length - 1 ? (
@@ -110,6 +111,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
           .breadcrumbs-container.white-left .breadcrumbs-wrapper {
             text-align: left;
             padding: 0 30px;
+            margin: 0 auto;
           }
 
           .breadcrumbs-container.white-left .breadcrumbs-list {
@@ -132,6 +134,15 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             flex-wrap: wrap;
             gap: 4px;
             justify-content: center;
+          }
+
+          .breadcrumbs-wrapper.left {
+            text-align: left;
+            margin: 0;
+          }
+
+          .breadcrumbs-list.align-left {
+            justify-content: flex-start;
           }
 
           .breadcrumb-item {
@@ -244,7 +255,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
               padding: 1px 3px;
             }
 
-            /* Компактная версия - показываем только последние 2 элемента */
+            /* Компактная версия - по��азываем только последние 2 элемента */
             .breadcrumb-item:not(:nth-last-child(-n+2)) {
               display: none;
             }

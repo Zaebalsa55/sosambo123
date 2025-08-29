@@ -236,6 +236,7 @@ const Articles = (props) => {
             width: 100%;
             min-height: 100vh;
             background-color: #f8f9fa;
+            font-family: 'Noto Serif SC', serif;
           }
 
           /* Hero секция */
@@ -252,17 +253,16 @@ const Articles = (props) => {
           }
 
           .articles-main-title {
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-size: 35px;
+            font-weight: 400;
             margin-bottom: 20px;
             font-family: 'Noto Serif SC', serif;
-            letter-spacing: 1.5px;
           }
 
           .articles-subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             line-height: 1.6;
           }
 
@@ -314,9 +314,10 @@ const Articles = (props) => {
 
           .tab-title {
             font-size: 1.4rem;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 8px;
-            font-family: 'Noto Serif SC', serif;
+            font-family: 'Spectral', serif;
+            font-style: italic;
             transition: color 0.3s ease;
           }
 
@@ -328,7 +329,8 @@ const Articles = (props) => {
             font-size: 0.95rem;
             line-height: 1.4;
             opacity: 0.8;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Spectral', serif;
+            font-style: italic;
             transition: color 0.3s ease;
           }
 
@@ -420,16 +422,18 @@ const Articles = (props) => {
             color: #232020;
             margin-bottom: 10px;
             line-height: 1.3;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Noto Serif SC', serif;
             flex-grow: 1;
           }
 
           .card-description {
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 0.95rem;
+            color: #333333;
             line-height: 1.4;
             margin-bottom: 15px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Nunito', sans-serif;
+            font-style: italic;
+            font-weight: 300;
           }
 
           /* Стили кнопки */
@@ -471,13 +475,14 @@ const Articles = (props) => {
             }
 
             .articles-main-title {
-              font-size: 2.5rem;
+              font-size: 35px;
               color: #232020;
             }
 
             .articles-subtitle {
               color: #666;
               opacity: 1;
+              font-size: 0.9rem;
             }
 
             .articles-tabs {
@@ -491,10 +496,15 @@ const Articles = (props) => {
 
             .tab-title {
               font-size: 1.2rem;
+              font-family: 'Spectral', serif;
+              font-style: italic;
+              font-weight: 500;
             }
 
             .tab-subtitle {
               font-size: 0.9rem;
+              font-family: 'Spectral', serif;
+              font-style: italic;
             }
 
             .articles-switcher-section {
@@ -529,13 +539,14 @@ const Articles = (props) => {
             }
 
             .articles-main-title {
-              font-size: 2rem;
+              font-size: 24px;
               color: #232020;
             }
 
             .articles-subtitle {
               color: #666;
               opacity: 1;
+              font-size: 0.85rem;
             }
 
             .tab-button {
@@ -573,10 +584,13 @@ const Articles = (props) => {
 
             .card-title {
               font-size: 1rem;
+              font-family: 'Noto Serif SC', serif;
             }
 
             .card-description {
-              font-size: 0.85rem;
+              font-size: 0.9rem;
+              font-family: 'Nunito', sans-serif;
+              font-style: italic;
             }
           }
         `}

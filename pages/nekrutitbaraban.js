@@ -8,6 +8,7 @@ import PageNavigation from '../components/PageNavigation'
 import OrderButton from '../components/OrderButton'
 import OrderModal from '../components/OrderModal'
 import Breadcrumbs from '../components/Breadcrumbs'
+import RelatedArticles from '../components/RelatedArticles'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
@@ -40,9 +41,9 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
-        <Breadcrumbs style="white-left" />
         <main className="page-main">
           <div className="page-left-main-box">
+            <Breadcrumbs style="white-left" />
             <div className="page-headertextwashermachine">
               <h1 className="page-text10">
                 <span className="page-text11">
@@ -171,7 +172,7 @@ const Page = (props) => {
                     className="page-vector4"
                   />
                   <a href="#4" className="page-link5 ge">
-                    3. Неисправность двигателя или щёток.
+                    3. Неиспр��вность двигателя или щёток.
                   </a>
                 </li>
                 <li className="page-li6 list-item">
@@ -302,7 +303,7 @@ const Page = (props) => {
                     Попробуйте покрутить ба��абан рукой (после слива воды барабан
                     должен свободно вращаться). Если при вращении чувствуются
                     заедания или слышится посторонний шум, возможно, внутри
-                    что-то застряло ��ли заклинило. В этом случае снова осмотрите
+                    чт��-то застряло ��ли заклинило. В этом случае снова осмотрите
                     барабан �� бак, удалите посторонние предметы.
                   </p>
 
@@ -369,12 +370,12 @@ const Page = (props) => {
                 <p className="vicetext">
                   {' '}
                   Если люк не закрыт «до щелчка» или что-то мешает защёлке —
-                  например, тка���� прилипла к уплотнителю — машина распознает это
+                  например, тка���� прилипла к уплотнител�� — машина распознает это
                   как неисправность и не запустит программу; отсутствие
                   характерного щелч���� или свобод��о болтающаяс�� дверца могут
                   указывать на механическую поломку замка. В таких случаях нужно
                   убедиться, что люк закрыт плотно и ничего не зажато; при
-                  признаках повреждения замка или его ненадёжной фиксации замена
+                  признаках повреждения замка или его ненадёжной ��иксации замена
                   узла в сервисе решит проблему, поскольку продолж��ть работу с
                   неисправной защёлкой опасно и неэффективно.
                 </p>
@@ -416,13 +417,13 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Если двигатель работает, слышен гул, н�� барабан не вращается
+                  Если двигатель работает, слышен гул, н�� барабан не вращ��ется
                   или вращается вяло, вероятно, слетел или порван приводной
                   ремень; при этом машина может выполнять другие эт���пы цик����
                   (налив, нагрев), но не передавать вращение на барабан. В таких
                   ситуациях при доступе к задней панели можно визуально
                   осмотреть ремень: если он перекинул��я, его аккуратно
-                  возвращают на шкив, а при ��вных повреждения�� ремень меняют —
+                  во��вращают на шкив, а при ��вных повреждения�� ремень меняют —
                   при от��утствии уверенност�� в своих навыках лучше доверить
                   замену мастеру, чтобы избежать невер��ой установки или
                   дополнительного повреждения.
@@ -471,7 +472,7 @@ const Page = (props) => {
                   щётки, и при плохом контакте мотор теряет мощность или вообще
                   не ��апускается; иногда слышен только гул мотора без д��ижения
                   барабана, а при серьёзном ��овреждении обмоток возможен и
-                  полный отказ. При подозрении на изн��с щёток или внутренние
+                  полный отказ. При подозр��нии на изн��с щёток или внутренние
                   проблемы мотор�� самостоятельный р��монт не рекомендуется —
                   точную диагн��стику и замену выполняет мастер, который пров��рит
                   состояние щёток, обмоток и подшипников и при необходимости
@@ -676,7 +677,7 @@ const Page = (props) => {
               <h2 className="page-text50">Когда вы��ывать мастера?</h2>
               <p className="page-text51">
                 <span className="page-text52">
-                  Если вы выполнили все рекомендации, но пробл��ма осталась —
+                  Если вы выполни��и все рекомендации, но пробл��ма осталась —
                   обратитесь в серв��с
                   <span
                     dangerouslySetInnerHTML={{
@@ -691,7 +692,7 @@ const Page = (props) => {
                 <span className="page-text57">
                   {' '}
                   Наши специалисты быс��ро прие��ут к вам в желаемое вами вре��я в
-                  любой район Одессы и выполнят качественную диагностику и
+                  любой район Одессы и выполнят качественн��ю диагностику и
                   ремонт.
                 </span>
               </p>
@@ -762,59 +763,7 @@ const Page = (props) => {
                 strokeDasharray="11 11"
               ></path>
             </svg>
-            <div className="page-container39">
-              <h4 className="page-text65">
-                <span>Другие статьи</span>
-                <br></br>
-              </h4>
-            </div>
-            <div className="page-container40">
-              <div className="page-container41">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823145-200h.png"
-                  loading="lazy"
-                  className="page-image38230321"
-                />
-                <span className="page-text68">
-                  Как избавиться от жирных пятен н�� одежде в домашних условиях?
-                </span>
-              </div>
-              <div className="page-container42">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823146-200h.png"
-                  loading="lazy"
-                  className="page-image38230322"
-                />
-                <span className="page-text69">
-                  Как уд��лить пятна кро��и с одежды без следов?
-                </span>
-              </div>
-              <div className="page-container43">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823147-200h.png"
-                  loading="lazy"
-                  className="page-image38230323"
-                />
-                <span className="page-text70">
-                  Как самостоятельно удалить жвачку с одежды?
-                </span>
-              </div>
-              <div className="page-container44">
-                <img
-                  alt="image38230328104"
-                  src="/100x100/image%203823144-200h.png"
-                  loading="lazy"
-                  className="page-image38230324"
-                />
-                <span className="page-text71">
-                  Как правильно стирать п��ховик в автоматической стиральной
-                  машине?
-                </span>
-              </div>
-            </div>
+            <RelatedArticles />
           </div>
           <div className="page-dops-info">
             <section className="page-frame1299">

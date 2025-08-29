@@ -29,11 +29,11 @@ const Vikup = (props) => {
           structuredData={structuredData}
         />
         <Header />
-        <Breadcrumbs style="white-left" />
         <div className="page1-main-posle-hedera">
           <div className="page1-container11">
             <div className="page1-container12">
               <div className="page1-container13">
+                <Breadcrumbs style="white-left" />
                 <h1 className="page1-text10">
                   <span>Выкуп б/у машин</span>
                   <br></br>
