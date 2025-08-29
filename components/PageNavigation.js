@@ -63,8 +63,8 @@ const PageNavigation = ({ prevPage, nextPage }) => {
           align-items: center;
           justify-content: center;
           gap: var(--dl-layout-space-twounits);
-          margin-top: 25px;
-          margin-bottom: 25px;
+          margin-top: 40px;
+          margin-bottom: 40px;
         }
 
         .page-nav-container {

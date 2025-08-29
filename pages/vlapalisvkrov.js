@@ -10,7 +10,7 @@ import OrderModal from '../components/OrderModal'
 import Breadcrumbs from '../components/Breadcrumbs'
 import RelatedArticles from '../components/RelatedArticles'
 import { getSEOData } from '../utils/seoConfig'
-import { getProblemPageStructuredData } from '../utils/structuredData'
+import { getArticleStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -22,12 +22,13 @@ const Page = (props) => {
   const closeModal = () => {
     setIsModalOpen(false)
   }
-  const seoData = getSEOData('/negreetvodu')
+  const seoData = getSEOData('/vlapalisvkrov')
   const baseUrl = 'https://remstirmash.od.ua'
-  const structuredData = getProblemPageStructuredData(
-    'Ремонт стиральной машины которая не греет воду',
-    'Профессиональный ремонт стиральных машин которые не нагревают воду в Одессе. Замена ТЭНа, ремонт термостата.',
-    `${baseUrl}/negreetvodu`
+  const structuredData = getArticleStructuredData(
+    'Как удалить пятна крови с одежды',
+    'Как быстро и аккуратно вывести пят��а крови с разных тканей, не повредив их',
+    `${baseUrl}/vlapalisvkrov`,
+    `${baseUrl}/100x100/krov.png`
   )
 
   return (
@@ -37,7 +38,7 @@ const Page = (props) => {
           title={seoData.title}
           description={seoData.description}
           keywords={seoData.keywords}
-          canonical={`${baseUrl}/negreetvodu`}
+          canonical={`${baseUrl}/vlapalisvkrov`}
           structuredData={structuredData}
         />
         <Header />
@@ -270,7 +271,7 @@ const Page = (props) => {
             <section id="2" className="page-thirdproblem1">
               <div className="page-container16 zagolovkiskorobkoy">
                 <h3 className="zagolovki2">
-                  1. Холодная вода и хозяйст��енное мыло
+                  1. Холодная вода и хоз��йст��енное мыло
                 </h3>
                 <svg
                   width="330"
@@ -429,7 +430,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Соль – доступное средство для удаления крови. Для начала можно приготовить солевой раствор (3–4 литра холодной воды и 50–60 г соли) и замочить вещь на 4–8 часов. Затем стирайте обычным способом. Также есть «сухой» вариант: обил��но посыпьте пятно поваренной солью, потрите мягкой щёткой и дайте соли впитаться 15–30 минут, затем смойте и постирайте. Такой метод подходит для б��лее крепких натуральных тканей. Аналогично работают и содовые растворы: в 200 мл холодной воды растворите 10 г соды, нанесите на пятно, оставьте на 20–30 минут и сн��ва постирайте. Оба этих способа безопасны для цветных тканей и эффективны против свежих и средней давности пятен кр��ви.
+                  Соль – доступное средство для удаления крови. Для начала можно приготовить солевой раствор (3–4 литра холодной воды и 50–60 г соли) и замочить вещь на 4–8 часов. Затем стирайте обычным способом. Также есть «сухой» вариант: обил��но посыпьте пятно поваренной солью, потрите мягкой щёткой и дайте соли впитаться 15–30 минут, затем смойте и постирайте. Такой метод подходит для б��лее крепких натуральных тканей. Аналогично работаю�� и содовые растворы: в 200 мл холодной воды растворите 10 г соды, нанесите на пятно, оставьте на 20–30 минут и сн��ва постирайте. Оба этих способа безопасны для цветных тканей и эффективны против свежих и средней давности пятен кр��ви.
                 </p>
               </div>
             </section>
@@ -471,7 +472,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text46 vicetext">
                   {' '}
-                  Аммиак (нашатырный спирт) хорошо помогает от сильных пятен крови на белом хлопке и ль��е. На 3 литра холодной воды добавьте 60 ��л нашатыря, замочите вещь на 1���2 часа, затем тщательно прополощите и постирайте. Для цветных тканей можно использовать специализированные ферментные пятновыводители. В их составе есть протеиназы – ферменты, разрушающие белковые загрязнения. Нанесите препарат согласно инструкции (обычно на 15��30 минут), а потом выстирайте вещь. Такие средства особенно эффективны, если другие методы не помогли.
+                  Аммиак (нашатырный спирт) хорошо помогает от сильных пятен крови на белом хлопке и ль��е. На 3 литра холодной воды добавьте 60 ��л н��шатыря, замочите вещь на 1���2 часа, затем тщательно прополощите и постирайте. Для цветных тканей можно использовать специализированные ферментные пятновыводители. В их составе есть протеиназы – ферменты, разрушающие белковые загрязнения. Нанесите препарат согласно инструкции (обычно на 15��30 минут), а потом выстирайте вещь. Такие средства особенно эффективны, если другие методы не помогли.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -507,7 +508,7 @@ const Page = (props) => {
                 <p className="page-text49 vicetext">
                   {' '}
                   Один из малоизвестных, но действенных методов – использование подогретого глицерина. Глицерин немного подогревают, пропитывают им ватный диск и растирают пятно с обеих сторон. Такой приём позволяет «распустить» застаревшие пятна крови. После обработки глицериновые остатки нужно тщательно смыть и постирать вещь. Хотя это немного парадоксальный метод (тепло обычно противопоказа��о!), глицерин действительно помогает вывести пятно без высоких температур.
-                  После любой обработки кровь лучше сразу постирать в холодной воде – так вы наверняка смоете все остатки. Если ткань очень деликатная или пятно очень старое, разумнее доверить вещь профессиональной химчистке: кровяные пятна считаются одними из самых сложных. Но обычно упомянутые домашние средства возвращают вещам чистоту без следов.
+                  После любой обработки кровь лучше сразу постирать в холодной воде ��� так вы наверняка смоете все остатки. Если ткань очень деликатная или пятно очень старое, разумнее доверить вещь профессиональной химчистке: кровяные пятна считаются одними из самых сложных. Но обычно упомянутые домашние средства возвращают вещам чистоту без следов.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -2468,45 +2469,57 @@ const Page = (props) => {
             }
             .page-container18 {
               gap: var(--dl-layout-space-halfunit);
-              height: 100%;
-              max-width: var(--dl-layout-size-xxlarge);
-              min-width: 100%;
-              min-height: 100%;
-              margin-bottom: 14px;
+              width: 220px;
+              max-width: 220px;
+              min-width: 220px;
+              height: auto;
+              min-height: 0;
+              margin: 10px auto 14px;
+              float: none;
             }
             .page-image38230522 {
               width: 100%;
-              min-width: 50%;
-              min-height: 50px;
+              height: 130px;
+              object-fit: cover;
+              min-width: 0;
+              min-height: 0;
             }
             .page-container21 {
               gap: var(--dl-layout-space-halfunit);
-              height: 100%;
-              max-width: var(--dl-layout-size-xxlarge);
-              min-width: 100%;
-              min-height: 100%;
-              margin-bottom: 14px;
+              width: 220px;
+              max-width: 220px;
+              min-width: 220px;
+              height: auto;
+              min-height: 0;
+              margin: 10px auto 14px;
+              float: none;
             }
             .page-image38230523 {
               width: 100%;
-              min-width: 50%;
-              min-height: 50px;
+              height: 130px;
+              object-fit: cover;
+              min-width: 0;
+              min-height: 0;
             }
             .page-text40 {
               font-size: 13px;
             }
             .page-container24 {
               gap: var(--dl-layout-space-halfunit);
-              height: 100%;
-              max-width: 100%;
-              min-width: 100%;
-              min-height: 100%;
-              margin-bottom: 14px;
+              width: 220px;
+              max-width: 220px;
+              min-width: 220px;
+              height: auto;
+              min-height: 0;
+              margin: 10px auto 14px;
+              float: none;
             }
             .page-image38230524 {
               width: 100%;
-              min-width: 50%;
-              min-height: 50px;
+              height: 130px;
+              object-fit: cover;
+              min-width: 0;
+              min-height: 0;
             }
             .page-text45 {
               font-size: 13px;
@@ -2516,16 +2529,20 @@ const Page = (props) => {
             }
             .page-container27 {
               gap: var(--dl-layout-space-halfunit);
-              height: 100%;
-              max-width: 100%;
-              min-width: 100%;
-              min-height: 100%;
-              margin-bottom: 14px;
+              width: 220px;
+              max-width: 220px;
+              min-width: 220px;
+              height: auto;
+              min-height: 0;
+              margin: 10px auto 14px;
+              float: none;
             }
             .page-image38230525 {
               width: 100%;
-              min-width: 50%;
-              min-height: 50px;
+              height: 130px;
+              object-fit: cover;
+              min-width: 0;
+              min-height: 0;
             }
             .page-text48 {
               font-size: 13px;

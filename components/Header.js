@@ -233,7 +233,7 @@ const Header = () => {
                   className={`frame1196-sidebar-link ${router.pathname === '/' ? 'frame1196-sidebar-link-active' : ''}`}
                   style={{ color: router.pathname === '/' ? '#87ceeb !important' : 'white !important' }}
                 >
-                  ГЛАВНАЯ
+                  Главная
                 </a>
               </Link>
               <Link href="/vikup">
@@ -241,7 +241,7 @@ const Header = () => {
                   className={`frame1196-sidebar-link ${router.pathname === '/vikup' ? 'frame1196-sidebar-link-active' : ''}`}
                   style={{ color: router.pathname === '/vikup' ? '#87ceeb !important' : 'white !important' }}
                 >
-                  ВЫКУП Б/У МАШИН
+                  Выкуп б/у машин
                 </a>
               </Link>
               <Link href="/articles">
@@ -249,7 +249,7 @@ const Header = () => {
                   className={`frame1196-sidebar-link ${isProblemPage ? 'frame1196-sidebar-link-active' : ''}`}
                   style={{ color: isProblemPage ? '#87ceeb !important' : 'white !important' }}
                 >
-                  СТАТЬИ
+                  Статьи
                 </a>
               </Link>
             </nav>
@@ -285,6 +285,8 @@ const Header = () => {
           /* Глобальные стили для принужде��ия цвета в sidebar */
           .frame1196-sidebar-nav a {
             color: white !important;
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 500 !important;
           }
           .frame1196-sidebar-nav a.frame1196-sidebar-link-active {
             color: #87ceeb !important;
@@ -904,6 +906,8 @@ const Header = () => {
             .frame1196-burger-menu {
               display: flex;
             }
+            /* Place burger left of contacts with ~40px gap */
+            .frame1196-container101 { justify-content: flex-start; }
             .frame1196-container104 {
               gap: 8px;
               width: auto;
@@ -911,8 +915,14 @@ const Header = () => {
               display: flex;
               align-items: center;
               border-radius: 8px;
-              justify-content: flex-end;
+              justify-content: flex-start;
               background-color: transparent;
+              order: 2;
+              margin-left: auto; /* push burger group to the right side */
+            }
+            .frame1196-obshiy {
+              order: 3;
+              margin-left: 40px; /* gap between burger and contacts */
             }
             .frame1196-image11 {
               display: none;
@@ -920,6 +930,10 @@ const Header = () => {
           }
 
           @media (max-width: 1150px) {
+            /* Reset layout for mobile/tablet */
+            .frame1196-container101 { justify-content: space-between; }
+            .frame1196-container104 { margin-left: 0; order: initial; }
+            .frame1196-obshiy { margin-left: 0; }
             .frame1196-container103 {
               gap: calc(var(--dl-layout-space-oneandhalfunits) + 10px);
               width: 340px;

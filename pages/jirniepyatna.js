@@ -10,7 +10,7 @@ import OrderModal from '../components/OrderModal'
 import Breadcrumbs from '../components/Breadcrumbs'
 import RelatedArticles from '../components/RelatedArticles'
 import { getSEOData } from '../utils/seoConfig'
-import { getProblemPageStructuredData } from '../utils/structuredData'
+import { getArticleStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -22,12 +22,13 @@ const Page = (props) => {
   const closeModal = () => {
     setIsModalOpen(false)
   }
-  const seoData = getSEOData('/negreetvodu')
+  const seoData = getSEOData('/jirniepyatna')
   const baseUrl = 'https://remstirmash.od.ua'
-  const structuredData = getProblemPageStructuredData(
-    'Ремонт стиральной машины которая не греет воду',
-    'Профессиональный ремонт стиральных машин которые не нагревают воду в Одессе. Замена ТЭНа, ремонт термостата.',
-    `${baseUrl}/negreetvodu`
+  const structuredData = getArticleStructuredData(
+    'Как избавиться от жирных пятен на одежде',
+    'Пошаговые рекомендации и безопасные средства для удаления жирных пятен дома',
+    `${baseUrl}/jirniepyatna`,
+    `${baseUrl}/100x100/jir.png`
   )
 
   return (
@@ -37,7 +38,7 @@ const Page = (props) => {
           title={seoData.title}
           description={seoData.description}
           keywords={seoData.keywords}
-          canonical={`${baseUrl}/negreetvodu`}
+          canonical={`${baseUrl}/jirniepyatna`}
           structuredData={structuredData}
         />
         <Header />
@@ -270,7 +271,7 @@ const Page = (props) => {
             <section id="2" className="page-thirdproblem1">
               <div className="page-container16 zagolovkiskorobkoy">
                 <h3 className="zagolovki2">
-                  1. Хозяйственное мыло и стиральный порошок
+                  1. Хозяйственное мыло и стиральный порош��к
                 </h3>
                 <svg
                   width="330"
@@ -305,7 +306,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Один из самых надёжных способов – использовать хорошую основу для стирки. Сначала намочите пятно тёплой водой и тщательно намыльте его хозяйственным мылом (лучше 72% жирности). Если пятно старое и въевшееся, можно присыпать намоченную ткань тёртой ст��ужкой мыла и аккуратно втереть её губкой или щёткой. Оставьте мыло впитаться: свежие пятна обычно удаляются за 20–30 минут, для застарелых понадобится от 2 часов до суток. После э��ого смойте остатки мыла влажной тряпочкой и постирайте вещь обычным способом. Такой метод хорош для любых тканей; даже хозяйственное мыло с современными добавками часто содержит усилители чистящих свойст��
+                  Один из самых надёжных способов – использовать ��орошую основу для стирки. Сначала намочите пятно тёплой водой и тщательно намыльте его хозяйственным мылом (лучше 72% жирности). Если пятно старое и въевшееся, можно присыпать намоченную ткань тёртой ст��ужкой мыла и аккуратно втереть её губкой или щёткой. Оставьте мыло впитаться: свежие пятна обычно удаляются за 20–30 минут, для застарелых понадобится от 2 часов до суток. После э��ого смойте остатки мыла влажной тряпочкой и постирайте вещь обычным способом. Такой метод хорош для любых тканей; даже хозяйственное мыло с современными добавками часто содержит усилители чистящих свойст��
                 </p>
               </div>
             </section>
@@ -429,7 +430,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Белый столовый уксус (5%) – доступный обезжириватель. Смешайте одну часть уксуса с 4 частями воды и нанесите раствор на загрязнение. Подождите несколько минут, затем тщательно промойте тёплой водой и постирайте вещь. Аналогично действует раствор лимонной кислоты или свежевыжатый лимонный сок, но такие кислоты ис��ользуют только на белой ткани, чтобы избежать обесцвечивания. После стирки запах кислоты исчезает сам.
+                  Белый столовый уксус (5%) – ��оступный обезжириватель. Смешайте одну часть уксуса с 4 частями воды и нанесите раствор на загрязнение. Подождите несколько минут, затем тщательно промойте тёплой водой и постирайте вещь. Аналогично действует раствор лимонной кислоты или свежевыжатый лимонный сок, но такие кислоты ис��ользуют только на белой ткани, чтобы избежать обесцвечивания. После стирки запах кислоты исчезает сам.
                 </p>
               </div>
             </section>
@@ -471,7 +472,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text46 vicetext">
                   {' '}
-                  Если пятно свежее, хороший абсорбирующий «лайфхак» – присыпать его толстым слоем талька, крахмала или детской присыпки. Эти порошки втягивают жир из волок��н. Оставьте присыпку на несколько часов или на ночь, затем сметите щёткой и постирайте изделие. Восстановить структуру ткани можно, прогладив участок через бумажное полотенце – тальк под утюгом вытянет остатки жира.
+                  Если пятно свежее, хороший абсорбирующий «лайфхак» – присыпать его толстым слоем талька, крахма��а или детской присыпки. Эти порошки втягивают жир из волок��н. Оставьте присыпку на несколько часов или на ночь, затем сметите щёткой и постирайте изделие. Восстановить структуру ткани можно, прогладив участок через бумажное полотенце – тальк под утюгом вытянет остатки жира.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -653,7 +654,7 @@ const Page = (props) => {
               <p className="page-text51">
                 <span className="page-text52">
                   Если вы выполнили все рекомендации, но проблема осталась —
-                  обратитесь в сервис
+                  обрат��тесь в сервис
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -2469,45 +2470,57 @@ const Page = (props) => {
             }
             .page-container18 {
               gap: var(--dl-layout-space-halfunit);
-              height: 100%;
-              max-width: var(--dl-layout-size-xxlarge);
-              min-width: 100%;
-              min-height: 100%;
-              margin-bottom: 14px;
+              width: 220px;
+              max-width: 220px;
+              min-width: 220px;
+              height: auto;
+              min-height: 0;
+              margin: 10px auto 14px;
+              float: none;
             }
             .page-image38230522 {
               width: 100%;
-              min-width: 50%;
-              min-height: 50px;
+              height: 130px;
+              object-fit: cover;
+              min-width: 0;
+              min-height: 0;
             }
             .page-container21 {
               gap: var(--dl-layout-space-halfunit);
-              height: 100%;
-              max-width: var(--dl-layout-size-xxlarge);
-              min-width: 100%;
-              min-height: 100%;
-              margin-bottom: 14px;
+              width: 220px;
+              max-width: 220px;
+              min-width: 220px;
+              height: auto;
+              min-height: 0;
+              margin: 10px auto 14px;
+              float: none;
             }
             .page-image38230523 {
               width: 100%;
-              min-width: 50%;
-              min-height: 50px;
+              height: 130px;
+              object-fit: cover;
+              min-width: 0;
+              min-height: 0;
             }
             .page-text40 {
               font-size: 13px;
             }
             .page-container24 {
               gap: var(--dl-layout-space-halfunit);
-              height: 100%;
-              max-width: 100%;
-              min-width: 100%;
-              min-height: 100%;
-              margin-bottom: 14px;
+              width: 220px;
+              max-width: 220px;
+              min-width: 220px;
+              height: auto;
+              min-height: 0;
+              margin: 10px auto 14px;
+              float: none;
             }
             .page-image38230524 {
               width: 100%;
-              min-width: 50%;
-              min-height: 50px;
+              height: 130px;
+              object-fit: cover;
+              min-width: 0;
+              min-height: 0;
             }
             .page-text45 {
               font-size: 13px;
@@ -2517,16 +2530,20 @@ const Page = (props) => {
             }
             .page-container27 {
               gap: var(--dl-layout-space-halfunit);
-              height: 100%;
-              max-width: 100%;
-              min-width: 100%;
-              min-height: 100%;
-              margin-bottom: 14px;
+              width: 220px;
+              max-width: 220px;
+              min-width: 220px;
+              height: auto;
+              min-height: 0;
+              margin: 10px auto 14px;
+              float: none;
             }
             .page-image38230525 {
               width: 100%;
-              min-width: 50%;
-              min-height: 50px;
+              height: 130px;
+              object-fit: cover;
+              min-width: 0;
+              min-height: 0;
             }
             .page-text48 {
               font-size: 13px;
