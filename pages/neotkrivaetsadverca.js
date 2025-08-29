@@ -43,7 +43,7 @@ const Page = (props) => {
         <Header />
         <main className="page-main">
           <div className="page-left-main-box">
-            <Breadcrumbs style="white-left" />
+
             <div className="page-headertextwashermachine">
               <h1 className="page-text10">
                 <span className="page-text11">
@@ -58,6 +58,7 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">что делать?</span>
               </h1>
+              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -156,7 +157,7 @@ const Page = (props) => {
                     className="page-vector4"
                   />
                   <a href="#4" className="page-link5 ge">
-                    3. Засор в сливной системе или неиспр��вность датчика уровня (прессостат).
+                    3. Засо�� в сливной системе или неиспр��вность датчика уровня (прессостат).
                   </a>
                 </li>
                 <li className="page-li6 list-item">
@@ -784,6 +785,7 @@ const Page = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
+          @media (max-width: 487px) { .page-headertextwashermachine { margin-top: 85px; } }
           .page-image1 {
             width: 50px;
             height: 50px;

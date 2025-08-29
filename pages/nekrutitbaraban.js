@@ -43,7 +43,6 @@ const Page = (props) => {
         <Header />
         <main className="page-main">
           <div className="page-left-main-box">
-            <Breadcrumbs style="white-left" />
             <div className="page-headertextwashermachine">
               <h1 className="page-text10">
                 <span className="page-text11">
@@ -58,6 +57,7 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">ч��о делать?</span>
               </h1>
+              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -293,7 +293,7 @@ const Page = (props) => {
                     <strong>2. Перераспределите или уберите часть б��лья.</strong><br />
                     Откройте дверцу и выньте часть белья. При необходимости
                     уменьшите загрузку, если она была слишком большой. Если
-                    белья совсем мало, добавьте ещё 2–3 вещи равного веса.
+                    белья совсем мало, до��авьте ещё 2–3 вещи равного веса.
                     ��стряхните оставшиеся вещи, равномерно распределив их по
                     барабану.
                   </p>
@@ -310,7 +310,7 @@ const Page = (props) => {
                   <p>
                     <strong>4. Закройте дверцу.</strong><br />
                     Убедитесь, что дверца люка закрыта плотно. Откройте и
-                    закройте её до характерного щелчка. Без плотной фиксации
+                    закройте её до характерного щелчка. ��ез плотной фиксации
                     дверца остаётся разблокированной – машина не начнёт цикл
                     стирки.
                   </p>
@@ -476,7 +476,7 @@ const Page = (props) => {
                   проблемы мотор�� самостоятельный р��монт не рекомендуется —
                   точную диагн��стику и замену выполняет мастер, который пров��рит
                   состояние щёток, обмоток и подшипников и при необходимости
-                  выполнит квалифицированную замену.
+                  выполни�� квалифицированную замену.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -674,7 +674,7 @@ const Page = (props) => {
                   strokeDasharray="11 11"
                 ></path>
               </svg>
-              <h2 className="page-text50">Когда вы��ывать мастера?</h2>
+              <h2 className="page-text50">��огда вы��ывать мастера?</h2>
               <p className="page-text51">
                 <span className="page-text52">
                   Если вы выполни��и все рекомендации, но пробл��ма осталась —
@@ -2345,6 +2345,7 @@ const Page = (props) => {
             }
             .page-headertextwashermachine {
               position: relative;
+              margin-top: 85px;
             }
             .page-image1 {
               top: -149px;

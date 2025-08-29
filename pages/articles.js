@@ -48,7 +48,7 @@ const Articles = (props) => {
       alt: "Стиральная машина не нагревает воду"
     },
     {
-      title: "Стиральная машина проте��ает",
+      title: "Стира��ьная машина проте��ает",
       href: "/protekaet", 
       image: "/problems 2/31-300h.webp",
       alt: "Стиральная машина протекает"
@@ -232,6 +232,10 @@ const Articles = (props) => {
 
       <style jsx>
         {`
+          :global(.breadcrumbs-container),
+          :global(.breadcrumbs-container.white-left) {
+            margin-top: 0 !important;
+          }
           .articles-container {
             width: 100%;
             min-height: 100vh;
@@ -260,7 +264,7 @@ const Articles = (props) => {
           }
 
           .articles-subtitle {
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             opacity: 0.9;
             font-family: 'Noto Serif SC', serif;
             line-height: 1.6;
@@ -284,7 +288,7 @@ const Articles = (props) => {
             background: white;
             border: 2px solid #e0e0e0;
             border-radius: 15px;
-            padding: 30px 25px;
+            padding: 22px 20px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: left;
@@ -316,8 +320,8 @@ const Articles = (props) => {
             font-size: 1.4rem;
             font-weight: 500;
             margin-bottom: 8px;
-            font-family: 'Spectral', serif;
-            font-style: italic;
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
             transition: color 0.3s ease;
           }
 
@@ -329,8 +333,8 @@ const Articles = (props) => {
             font-size: 0.95rem;
             line-height: 1.4;
             opacity: 0.8;
-            font-family: 'Spectral', serif;
-            font-style: italic;
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
             transition: color 0.3s ease;
           }
 
@@ -355,15 +359,15 @@ const Articles = (props) => {
             padding: 20px 0;
           }
 
-          /* Висящие карточки с эффектом наклона */
+          /* Висящие карточ��и с эффектом наклона */
           .floating-card {
             display: block;
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform: rotate(-1.5deg) translateY(3px);
+            transform: rotate(1deg) translateY(3px);
             text-decoration: none;
             color: inherit;
             position: relative;
@@ -372,14 +376,14 @@ const Articles = (props) => {
 
           .floating-card:hover {
             transform: rotate(0deg) translateY(-8px) scale(1.03);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
             z-index: 10;
           }
 
           /* Убираем разные повороты - все карточки одинаково */
           .floating-card:nth-child(even),
           .floating-card:nth-child(3n) {
-            transform: rotate(-1.5deg) translateY(3px);
+            transform: rotate(1deg) translateY(3px);
           }
 
           .floating-card:nth-child(even):hover,
@@ -422,7 +426,7 @@ const Articles = (props) => {
             color: #232020;
             margin-bottom: 10px;
             line-height: 1.3;
-            font-family: 'Noto Serif SC', serif;
+            font-family: 'Nunito', sans-serif;
             flex-grow: 1;
           }
 
@@ -432,7 +436,7 @@ const Articles = (props) => {
             line-height: 1.4;
             margin-bottom: 15px;
             font-family: 'Nunito', sans-serif;
-            font-style: italic;
+            font-style: normal;
             font-weight: 300;
           }
 
@@ -491,20 +495,20 @@ const Articles = (props) => {
             }
 
             .tab-button {
-              padding: 25px 20px;
+              padding: 20px 16px;
             }
 
             .tab-title {
               font-size: 1.2rem;
-              font-family: 'Spectral', serif;
-              font-style: italic;
+              font-family: 'Nunito', sans-serif;
+              font-style: normal;
               font-weight: 500;
             }
 
             .tab-subtitle {
               font-size: 0.9rem;
-              font-family: 'Spectral', serif;
-              font-style: italic;
+              font-family: 'Nunito', sans-serif;
+              font-style: normal;
             }
 
             .articles-switcher-section {
@@ -567,7 +571,7 @@ const Articles = (props) => {
 
             .floating-card {
               min-height: 260px;
-              transform: rotate(-1deg) translateY(2px);
+              transform: rotate(1deg) translateY(2px);
             }
 
             .floating-card:hover {
@@ -584,13 +588,13 @@ const Articles = (props) => {
 
             .card-title {
               font-size: 1rem;
-              font-family: 'Noto Serif SC', serif;
+              font-family: 'Nunito', sans-serif;
             }
 
             .card-description {
               font-size: 0.9rem;
               font-family: 'Nunito', sans-serif;
-              font-style: italic;
+              font-style: normal;
             }
           }
         `}

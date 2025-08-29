@@ -43,7 +43,6 @@ const Page = (props) => {
         <Header />
         <main className="page-main">
           <div className="page-left-main-box">
-            <Breadcrumbs style="white-left" />
             <div className="page-headertextwashermachine">
               <h1 className="page-text10">
                 <span className="page-text11">
@@ -58,6 +57,7 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">что делать?</span>
               </h1>
+              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -319,7 +319,7 @@ const Page = (props) => {
 
                   <p>
                     <strong>2. Проверьте электрическую цепь.</strong><br />
-                    Убедит��сь, что автомат в электрощите включён, а провод п��тания и розетка не повреждены. Подключите к той же розетке дру��ой прибор, чтобы убедиться, что питание ��сть.
+                    Убедит��сь, что автомат в электрощите включён, а провод п��тания и розетка не повреждены. Подключите к той же розетке дру����й прибор, чтобы убедиться, что питание ��сть.
                   </p>
 
                   <p>
@@ -334,7 +334,7 @@ const Page = (props) => {
 
                   <p>
                     <strong>5. Перезапустите оборудование.</strong><br />
-                    Отключите машину от сети на несколько минут (примерно на 10–15), затем включите снова. Иногда однократный «глюк» электроники устраняется сбросом питания.
+                    Отключите машину от сети на несколько минут (примерно на 10–15), за��ем включите снова. Иногда однократный «глюк» электроники устраняется сбросом питания.
                   </p>
 
                   <p>
@@ -2422,6 +2422,7 @@ const Page = (props) => {
             }
             .page-headertextwashermachine {
               position: relative;
+              margin-top: 85px;
             }
             .page-image1 {
               top: -149px;

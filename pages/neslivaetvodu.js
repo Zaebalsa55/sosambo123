@@ -43,7 +43,7 @@ const Page = (props) => {
         <Header />
         <main className="page-main">
           <div className="page-left-main-box">
-            <Breadcrumbs style="white-left" />
+
             <div className="page-headertextwashermachine">
               <h1 className="page-text10">
                 <span className="page-text11">
@@ -58,6 +58,7 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">что делать?</span>
               </h1>
+              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -308,7 +309,7 @@ const Page = (props) => {
                   </span>
                 </figure>
                 <p className="vicetext">
-                  Сливной фильтр улавливает мелк��е предметы и ворси��ки, не давая им попасть в насос. Как правило, он находится в нижней части корпуса за откидной крышкой. Пе��ед нач��лом любых ��абот обязательно отключите машину от сети и подготовьте ёмкость для слива. Аккуратн�� открутите кры��ку фильтра против часов��й стрелки – под ней немедленно начнёт вытекать вода. Как только в баке останется мало ��оды, сработает защёлка запорного механизма, и дверца разблокируется. После этого полностью вытащите фильтр и очистите его от ско��ившейся пыли, волос, монеток и других посто��онних предметов. Собирая обратно, будьте осторожны: пластмассовый фильтр хрупкий. Если засор в фильтре ��ыл причиной проблемы, после его очистки вода будет свободно уходить, а люк должен открыться.
+                  Сливной фильтр улавлив��ет мелк��е предметы и ворси��ки, не давая им попасть в насос. Как правило, он находится в нижней части корпуса за откидной крышкой. Пе��ед нач��лом любых ��абот обязательно отключите машину от сети и подготовьте ёмкость для слива. Аккуратн�� открутите кры��ку фильтра против часов��й стрелки – под ней немедленно начнёт вытекать вода. Как только в баке останется мало ��оды, сработает защёлка запорного механизма, и дверца разблокируется. После этого полностью вытащите фильтр и очистите его от ско��ившейся пыли, волос, монеток и других посто��онних предметов. Собирая обратно, будьте осторожны: пластмассовый фильтр хрупкий. Если засор в фильтре ��ыл причиной проблемы, после его очистки вода будет свободно уходить, �� люк должен открыться.
                 </p>
               </div>
             </section>
@@ -559,7 +560,7 @@ const Page = (props) => {
                     className="page-image38230522"
                   />
                   <span className="page-text19">
-                    <span>Подготовк�� к аварийному сливу</span>
+                    <span>Подготовк��� к аварийному сливу</span>
                     <br></br>
                   </span>
                 </figure>
@@ -970,7 +971,7 @@ const Page = (props) => {
             position: relative;
             max-width: 586px;
             min-width: 290px;
-            box-shadow: 0px 0px 20px 3px #d4d4d4;
+            box-shadow: 0px 12px 28px 0px #d4d4d4;
             margin-top: var(--dl-layout-space-unit);
             align-items: flex-start;
             padding-top: var(--dl-layout-space-unit);
@@ -1242,6 +1243,7 @@ const Page = (props) => {
             margin-bottom: var(--dl-layout-space-halfunit);
             padding: 5px;
           }
+          @media (max-width: 487px) { .page-headertextwashermachine { margin-top: 85px; } }
           @media (max-width: 768px) {
             .page-container13,
             .page-container17,
@@ -1542,7 +1544,7 @@ const Page = (props) => {
             display: flex;
             position: relative;
             max-width: 100%;
-            box-shadow: 0px 0px 20px 3px #d4d4d4;
+            box-shadow: 0px 12px 28px 0px #d4d4d4;
             margin-top: var(--dl-layout-space-oneandhalfunits);
             min-height: 330px;
             align-items: center;

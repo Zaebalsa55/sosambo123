@@ -98,6 +98,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             background-color: transparent;
             border-bottom: none;
             padding: 12px 0;
+            margin-top: 0;
           }
 
           /* Стиль с выравниванием слева */
@@ -106,11 +107,12 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             border-bottom: none;
             padding: 15px 0;
             box-shadow: none;
+            margin-top: 0;
           }
 
           .breadcrumbs-container.white-left .breadcrumbs-wrapper {
             text-align: left;
-            padding: 0 30px;
+            padding: 0 var(--dl-layout-space-unit);
             margin: 0 auto;
           }
 
@@ -121,7 +123,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
           .breadcrumbs-wrapper {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 var(--dl-layout-space-unit);
             text-align: center;
           }
 
@@ -188,14 +190,14 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
           /* Адаптивность */
           @media (min-width: 488px) {
             .breadcrumbs-container {
-              margin-top: 20px;
+              margin-top: 0;
             }
           }
 
           @media (max-width: 487px) {
             .breadcrumbs-container {
               padding: 8px 0;
-              margin-top: 85px;
+              margin-top: 0;
             }
 
             .breadcrumbs-wrapper {
@@ -227,7 +229,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
           @media (max-width: 480px) {
             .breadcrumbs-container {
               padding: 6px 0;
-              margin-top: 85px;
+              margin-top: 0;
             }
 
             .breadcrumbs-wrapper {

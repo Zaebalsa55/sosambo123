@@ -43,7 +43,6 @@ const Page = (props) => {
         <Header />
         <main className="page-main">
           <div className="page-left-main-box">
-            <Breadcrumbs style="white-left" />
             <div className="page-headertextwashermachine">
               <h1 className="page-text10">
                 <span className="page-text11">
@@ -58,6 +57,7 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">что делать?</span>
               </h1>
+              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -132,7 +132,7 @@ const Page = (props) => {
                 <li className="page-li2 list-item">
                   <img alt="image" src="/vector.svg" className="page-image2" />
                   <a href="#2" className="page-link2">
-                    Как избавиться от жирных пятен на одежде:
+                    Как избавиться от жирных пятен на ��дежде:
                   </a>
                 </li>
                 <li className="page-li3 list-item">
@@ -387,7 +387,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Жидкость для мытья посуды содержит компоненты, разрушающие жировые загрязнения, поэтому она подходит и для одежды. Нанесите несколько капель средства на пятно и оставьте на 5–10 минут. Затем постирайте вещь – как правило, этого достаточно. Для очень застарелых пятен можно предварительно замочить одежду: нанесите гель на пятно, накройте пищевой плёнкой на пару часов, а потом постирайте в тёплой воде с порошком. Это сочетание агрессивного средства и дополнительного времени улучшит результат.
+                  Жидкость для мытья посуды содерж��т компоненты, разрушающие жировые загрязнения, поэтому она подходит и для одежды. Нанесите несколько капель средства на пятно и оставьте на 5–10 минут. Затем постирайте вещь – как правило, этого достаточно. Для очень застарелых пятен можно предварительно замочить одежду: нанесите гель на пятно, накройте пищевой плёнкой на пару часов, а потом постирайте в тёплой воде с порошком. Это сочетание агрессивного средства и дополнительного времени улучшит результат.
                 </p>
               </div>
             </section>
@@ -750,7 +750,7 @@ const Page = (props) => {
               </div>
               <div className="page-frame12982">
                 <span className="page-text74">
-                  Как продлить жизнь машине на 3–5 лет — простые привычки,
+                  Как продлить жизнь машине на 3–5 лет — простые прив��чки,
                   которые сэкономят деньги
                 </span>
                 <div className="page-container46"></div>
@@ -2353,6 +2353,7 @@ const Page = (props) => {
             }
             .page-headertextwashermachine {
               position: relative;
+              margin-top: 85px;
             }
             .page-image1 {
               top: -149px;
