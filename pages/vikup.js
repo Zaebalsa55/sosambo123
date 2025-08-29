@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
 import SEOHead from '../components/SEOHead'
 import Breadcrumbs from '../components/Breadcrumbs'
+import SellModal from '../components/SellModal'
 import { getSEOData } from '../utils/seoConfig'
 import { getServiceData, getLocalBusinessData, getBreadcrumbData } from '../utils/structuredData'
 
 const Vikup = (props) => {
+  const [isSellModalOpen, setIsSellModalOpen] = useState(false)
+
+  const openSellModal = () => setIsSellModalOpen(true)
+  const closeSellModal = () => setIsSellModalOpen(false)
+
   const seoData = getSEOData('/vikup')
   const baseUrl = 'https://remstirmash.od.ua'
   const serviceData = getServiceData(
-    'Выкуп б/у стиральных машин',
+    'Выкуп б/у стиральны�� машин',
     'Выкупаем б/у стиральные машины в Одессе дорого. Любые марки и состояние.',
     `${baseUrl}/vikup`
   )
@@ -442,7 +448,7 @@ const Vikup = (props) => {
                   strokeDasharray="11 11"
                 ></path>
               </svg>
-              <div className="page1-container26">
+              <div className="page1-container26" onClick={openSellModal}>
                 <div className="page1-container27">
                   <span className="page1-text43">Продать</span>
                 </div>
@@ -620,7 +626,7 @@ const Vikup = (props) => {
                   strokeDasharray="11 11"
                 ></path>
               </svg>
-              <div className="page1-container30">
+              <div className="page1-container30" onClick={openSellModal}>
                 <div className="page1-container31">
                   <span className="page1-text46">Продать</span>
                 </div>
@@ -666,7 +672,7 @@ const Vikup = (props) => {
                   strokeDasharray="11 11"
                 ></path>
               </svg>
-              <div className="page1-container34">
+              <div className="page1-container34" onClick={openSellModal}>
                 <div className="page1-container35">
                   <span className="page1-text49">Продать</span>
                 </div>
@@ -680,6 +686,7 @@ const Vikup = (props) => {
           </div>
         </article>
         <MainFooter />
+        <SellModal isOpen={isSellModalOpen} onClose={closeSellModal} />
       </div>
       <style jsx>
         {`
@@ -765,8 +772,8 @@ const Vikup = (props) => {
             justify-content: center;
           }
           .page1-text10 {
-            fill: #ffd84d;
-            color: #ffd84d;
+            fill: #4ec8ed;
+            color: #4ec8ed;
             font-size: 25px;
             align-self: center;
             font-style: normal;
@@ -1191,6 +1198,11 @@ const Vikup = (props) => {
             align-items: flex-start;
             flex-direction: row-reverse;
             justify-content: flex-start;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+          }
+          .page1-container26:hover {
+            transform: scale(1.05);
           }
           .page1-container27 {
             display: flex;
@@ -1314,6 +1326,11 @@ const Vikup = (props) => {
             align-items: flex-start;
             flex-direction: row-reverse;
             justify-content: flex-start;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+          }
+          .page1-container30:hover {
+            transform: scale(1.05);
           }
           .page1-container31 {
             display: flex;
@@ -1381,6 +1398,11 @@ const Vikup = (props) => {
             align-items: flex-start;
             flex-direction: row-reverse;
             justify-content: flex-start;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+          }
+          .page1-container34:hover {
+            transform: scale(1.05);
           }
           .page1-container35 {
             display: flex;
@@ -1461,6 +1483,7 @@ const Vikup = (props) => {
             .page1-container12 {
               height: 100%;
               flex-wrap: wrap;
+              gap: calc(var(--dl-layout-space-oneandhalfunits) - 6px);
             }
             .page1-text13 {
               width: 100%;
@@ -1474,11 +1497,32 @@ const Vikup = (props) => {
               height: 323px;
             }
             .page1-container15 {
-              gap: var(--dl-layout-space-unit);
+              gap: calc(var(--dl-layout-space-unit) - 6px);
               max-width: 290px;
               padding-left: var(--dl-layout-space-oneandhalfunits);
               padding-right: 0px;
               flex-direction: column;
+            }
+            .page1-text29 {
+              font-size: 14px;
+              font-weight: 500;
+            }
+            .page1-text30 {
+              font-size: 14px;
+            }
+            .page1-text31 {
+              font-size: 14px;
+              font-weight: 500;
+            }
+            .page1-text32 {
+              font-size: 14px;
+            }
+            .page1-text33 {
+              font-size: 14px;
+              font-weight: 500;
+            }
+            .page1-text36 {
+              font-size: 14px;
             }
             .page1-text31 {
               font-style: normal;
@@ -1514,17 +1558,18 @@ const Vikup = (props) => {
             }
             .page1-main-posle-hedera {
               padding-top: 12px;
-              flex-direction: column-reverse;
+              flex-direction: column;
               background-image: none;
             }
             .page1-container12 {
               flex-wrap: wrap;
               align-items: center;
-              flex-direction: column-reverse;
+              flex-direction: column;
               justify-content: center;
             }
             .page1-container13 {
               width: 100%;
+              margin-top: 20px;
             }
             .page1-text10 {
               font-size: 21px;
@@ -1553,13 +1598,22 @@ const Vikup = (props) => {
               font-family: Spectral;
             }
             .page1-container15 {
-              gap: var(--dl-layout-space-unit);
+              gap: calc(var(--dl-layout-space-unit) - 6px);
               width: 280px;
               height: 100%;
               align-items: flex-start;
               padding-top: var(--dl-layout-space-twounits);
               padding-left: var(--dl-layout-space-oneandhalfunits);
               padding-bottom: var(--dl-layout-space-unit);
+            }
+            .page1-container16 {
+              gap: calc(var(--dl-layout-space-twounits) - 6px);
+            }
+            .page1-container18 {
+              gap: calc(var(--dl-layout-space-twounits) - 6px);
+            }
+            .page1-container20 {
+              gap: calc(var(--dl-layout-space-twounits) - 6px);
             }
             .page1-text29 {
               font-size: 1em;
