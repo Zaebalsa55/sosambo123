@@ -41,6 +41,9 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
+        <div className="page-breadcrumbs-section">
+          <Breadcrumbs style="white-left" />
+        </div>
         <main className="page-main">
           <div className="page-left-main-box">
             <div className="page-headertextwashermachine">
@@ -57,7 +60,6 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">что делать?</span>
               </h1>
-              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -152,7 +154,7 @@ const Page = (props) => {
                     className="page-vector2"
                   />
                   <a href="#2" className="page-link3 ge">
-                    1. Неисправен сливной насос (помпа)
+                    1. Не��справен сливной насос (помпа)
                   </a>
                 </li>
                 <li className="page-li4 list-item ge">
@@ -182,7 +184,7 @@ const Page = (props) => {
                     className="page-vector5"
                   />
                   <a href="#5" className="page-link6 ge">
-                    4. Растянутый или порв��вшийся приводной ремень.
+                    4. Растя��утый или порв��вшийся приводной ремень.
                   </a>
                 </li>
                 <li className="page-li6 list-item">
@@ -329,7 +331,7 @@ const Page = (props) => {
 
                   <p>
                     <strong>4. Иногда пробле��а связана с загрузкой белья.</strong><br />
-                    Если вещ���� сбил��сь в комок, барабан не может сбалансироваться. Встроенный датчик дисбаланса блокирует разгон, чтобы машина не «скакала» по комнате. Перетряхните бельё в барабан��, добавьте несколько мелких вещей или, наоборот, разделите большую партию на две стирки. Так бельё ра��пределится равномерно, и отжим пройдёт без проблем.
+                    Если вещ���� сбил��сь в комок, барабан не может сбалансироваться. Встроенный датчик дисбаланса блокирует разгон, чтобы машина не «скакала» по комнате. Перетряхните бельё в барабан��, добавьте несколько мелких вещей или, наоборот, разделите большую партию на две стирки. Так бельё ра��пределится равномерно, и отжим пройдё�� без проблем.
                   </p>
 
                   <p>
@@ -478,7 +480,7 @@ const Page = (props) => {
             <section id="5" className="page-fiveproblem2">
               <div className="page-container25 zagolovkiskorobkoy">
                 <h3 className="zagolovki2">
-                  4. Растянутый или пор��авшийся приводной ремень
+                  4. Растянутый или пор���авшийся приводной ремень
                 </h3>
                 <svg
                   width="330"
@@ -510,7 +512,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Приводной ремень передаёт вращение от двигателя к барабану. При о���лаблении или разрыве ремня ��арабан не сможет достичь нужных оборотов �� бельё останется сырым. Обычно при этом двигатель пытается работать (маши���ка гудит), но барабан ост��ётся вялым или не вращается вовсе. Если ремень с��етел, его можно перекинуть на ме��то (д��я этого снимают заднюю стенку и ослабляют крепление мотора). Если же ремень изношен, потребуется его замена. Причиной разрыва мо��ет быть старен��е ремня или износ подшипников (при сильных люфтах на валу ремень перекидывается и рвётся.
+                  Приводной ремень пе��едаёт вращение от двигателя к барабану. При о���лаблении или разрыве ремня ��арабан не сможет достичь нужных оборотов �� бельё останется сырым. Обычно при этом двигатель пытается работать (маши���ка гудит), но барабан ост��ётся вялым или не вращается вовсе. Если ремень с��етел, его можно перекинуть на ме��то (д��я этого снимают заднюю стенку и ослабляют крепление мотора). Если же ремень изношен, потребуется его замена. Причиной разрыва мо��ет быть старен��е ремня или износ подшипников (при сильных люфтах на валу ремень перекидывается и рвётся.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -889,6 +891,12 @@ const Page = (props) => {
             align-items: center;
             flex-direction: column;
             background-color: #ffffff;
+          }
+          .page-breadcrumbs-section {
+            width: 100%;
+            max-width: 1300px;
+            padding: 0 var(--dl-layout-space-unit);
+            margin: 0 auto;
           }
           .page-header {
             gap: 361px;
@@ -2378,6 +2386,9 @@ const Page = (props) => {
             }
           }
           @media (max-width: 767px) {
+            .page-breadcrumbs-section {
+              padding: 0 var(--dl-layout-space-oneandhalfunits);
+            }
             .page-left-main-box {
               align-items: center;
             }
@@ -2410,6 +2421,9 @@ const Page = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .page-breadcrumbs-section {
+              padding: 0 var(--dl-layout-space-unit);
+            }
             .page-header {
               height: 84px;
             }
@@ -2421,7 +2435,7 @@ const Page = (props) => {
             }
             .page-headertextwashermachine {
               position: relative;
-              margin-top: 85px;
+              margin-top: 53px;
             }
             .page-image1 {
               top: -149px;

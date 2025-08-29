@@ -5,7 +5,7 @@ import MainFooter from '../components/MainFooter'
 import SEOHead from '../components/SEOHead'
 import Breadcrumbs from '../components/Breadcrumbs'
 import { getSEOData } from '../utils/seoConfig'
-import { getServiceData, getLocalBusinessData } from '../utils/structuredData'
+import { getServiceData, getLocalBusinessData, getBreadcrumbData } from '../utils/structuredData'
 
 const Vikup = (props) => {
   const seoData = getSEOData('/vikup')
@@ -16,7 +16,11 @@ const Vikup = (props) => {
     `${baseUrl}/vikup`
   )
   const localBusinessData = getLocalBusinessData(`${baseUrl}/vikup`)
-  const structuredData = [serviceData, localBusinessData]
+  const breadcrumbData = getBreadcrumbData([
+    { name: 'Главная', url: `${baseUrl}/` },
+    { name: 'Выкуп б/у машин', url: `${baseUrl}/vikup` }
+  ])
+  const structuredData = [serviceData, localBusinessData, breadcrumbData]
 
   return (
     <>
@@ -29,11 +33,13 @@ const Vikup = (props) => {
           structuredData={structuredData}
         />
         <Header />
+        <div className="page1-breadcrumbs-section">
+          <Breadcrumbs style="white-left" />
+        </div>
         <div className="page1-main-posle-hedera">
           <div className="page1-container11">
             <div className="page1-container12">
               <div className="page1-container13">
-                <Breadcrumbs style="white-left" />
                 <h1 className="page1-text10">
                   <span>Выкуп б/у машин</span>
                   <br></br>
@@ -109,7 +115,7 @@ const Vikup = (props) => {
             </div>
             <div className="page1-container14">
               <h2 className="page1-text26">
-                <span>Почему лучше не выбрасывать</span>
+                <span>Почему луч��е не выбрасывать</span>
                 <br></br>
               </h2>
             </div>
@@ -685,6 +691,12 @@ const Vikup = (props) => {
             flex-direction: column;
             background-color: #ffffff;
           }
+          .page1-breadcrumbs-section {
+            width: 100%;
+            max-width: 1300px;
+            padding: 0 var(--dl-layout-space-unit);
+            margin: 0 auto;
+          }
           .page1-header {
             gap: 361px;
             width: 100%;
@@ -1080,7 +1092,7 @@ const Vikup = (props) => {
             align-self: center;
             box-shadow: 5px 5px 10px 0px #d4d4d4;
             align-items: flex-start;
-            margin-bottom: var(--dl-layout-space-twounits);
+            margin-bottom: calc(var(--dl-layout-space-twounits) * 1.5);
             flex-direction: column;
             justify-content: center;
             background-color: #87ceeb;
@@ -1108,7 +1120,7 @@ const Vikup = (props) => {
             font-weight: 400;
             line-height: normal;
             font-stretch: normal;
-            margin-bottom: var(--dl-layout-space-twounits);
+            margin-bottom: calc(var(--dl-layout-space-twounits) * 1.5);
             text-decoration: none;
           }
           .page1-container23 {
@@ -1122,7 +1134,7 @@ const Vikup = (props) => {
             min-width: auto;
             align-items: center;
             border-radius: var(--dl-layout-radius-imageradius);
-            margin-bottom: 100px;
+            margin-bottom: 67px;
             flex-direction: row;
             justify-content: center;
           }
@@ -1435,7 +1447,7 @@ const Vikup = (props) => {
               width: auto;
               height: auto;
               max-width: 300px;
-              margin-bottom: 100px;
+              margin-bottom: 67px;
             }
           }
           @media (max-width: 767px) {
@@ -1473,7 +1485,15 @@ const Vikup = (props) => {
               font-weight: 500;
             }
           }
+          @media (max-width: 767px) {
+            .page1-breadcrumbs-section {
+              padding: 0 var(--dl-layout-space-oneandhalfunits);
+            }
+          }
           @media (max-width: 479px) {
+            .page1-breadcrumbs-section {
+              padding: 0 var(--dl-layout-space-unit);
+            }
             .page1-header {
               height: 84px;
             }

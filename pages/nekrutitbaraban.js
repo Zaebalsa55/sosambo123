@@ -41,6 +41,9 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
+        <div className="page-breadcrumbs-section">
+          <Breadcrumbs style="white-left" />
+        </div>
         <main className="page-main">
           <div className="page-left-main-box">
             <div className="page-headertextwashermachine">
@@ -57,7 +60,6 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">ч��о делать?</span>
               </h1>
-              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -282,7 +284,7 @@ const Page = (props) => {
                 <div className="vicetext">
                   <p>
                     <strong>1. ��бесточьте машину и слейте воду.</strong><br />
-                    Выключите стиральную машину и отключите её от сети. Слейте
+                    Выключите стиральную ма��ину и отключите её от сети. Слейте
                     воду из барабана с помощью аварийного шланга или через
                     фильтр (если таковой имеется). ��то необходимо сделать перед
                     любыми проверками, ч��обы вода не помешала осмотру и не
@@ -316,7 +318,7 @@ const Page = (props) => {
                   </p>
 
                   <p>
-                    <strong>5. Запустите тестовый цикл без белья.</strong><br />
+                    <strong>5. Запустите тестовый цикл без бе��ья.</strong><br />
                     Включите любой короткий цикл (например, «хлопок») на обычной
                     мощности без загрузки белья. Проследите, начнётся ли
                     вращение барабана на этапе отжима. Если барабан по-прежнему
@@ -419,7 +421,7 @@ const Page = (props) => {
                   {' '}
                   Если двигатель работает, слышен гул, н�� барабан не вращ��ется
                   или вращается вяло, ве��оятно, слетел или порван приводной
-                  ремень; при этом машина может выполнять другие эт���пы цик����
+                  ремень; пр�� этом машина может выполнять другие эт���пы цик����
                   (налив, нагрев), но не передавать вращение на барабан. В таких
                   ситуациях при доступе к задней панели можно визуально
                   осмотреть ремень: если он перекинул��я, его аккуратно
@@ -517,7 +519,7 @@ const Page = (props) => {
                     className="page-image38230522"
                   />
                   <span className="page-text19">
-                    <span>Блок управления</span>
+                    <span>��лок управления</span>
                     <br></br>
                   </span>
                 </figure>
@@ -531,7 +533,7 @@ const Page = (props) => {
                   случаях перезагрузка — кратковременное отключение питания —
                   иногда устраняет временные сбои, но при повторяющихся ошибках
                   требуется профессиональная диагностика и ремонт элек��роники,
-                  так как самостоятельные вмешательства в плату без опыта
+                  так как самостоятел��ные вмешательства в плату без опыта
                   чреваты усугублением ��еисправно��ти.
                   <span
                     dangerouslySetInnerHTML={{
@@ -739,7 +741,7 @@ const Page = (props) => {
             <PageNavigation
               prevPage={{
                 href: '/neotkrivaetsadverca',
-                title: 'У стиральной машины не открывается дверца'
+                title: 'У стиральной маш��ны не открывается дверца'
               }}
               nextPage={{
                 href: '/neslivaetvodu',
@@ -823,6 +825,12 @@ const Page = (props) => {
             align-items: center;
             flex-direction: column;
             background-color: #ffffff;
+          }
+          .page-breadcrumbs-section {
+            width: 100%;
+            max-width: 1300px;
+            padding: 0 var(--dl-layout-space-unit);
+            margin: 0 auto;
           }
           .page-header {
             gap: 361px;
@@ -2353,7 +2361,7 @@ const Page = (props) => {
             }
             .page-headertextwashermachine {
               position: relative;
-              margin-top: 85px;
+              margin-top: 53px;
             }
             .page-image1 {
               top: -149px;

@@ -26,7 +26,7 @@ const Page = (props) => {
   const baseUrl = 'https://remstirmash.od.ua'
   const structuredData = getProblemPageStructuredData(
     'Ремонт стиральной машины которая не включается',
-    'Профессиональный ремонт стиральных машин которые не включаются в Одессе. Диагностика блока питания, ремонт управления.',
+    'Профессиональный ремонт с��иральных машин которые не включаются в Одессе. Диагностика блока питания, ремонт управления.',
     `${baseUrl}/nevkluchaetsa`
   )
 
@@ -41,6 +41,9 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
+        <div className="page-breadcrumbs-section">
+          <Breadcrumbs style="white-left" />
+        </div>
         <main className="page-main">
           <div className="page-left-main-box">
             <div className="page-headertextwashermachine">
@@ -57,7 +60,6 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">что делать?</span>
               </h1>
-              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -388,7 +390,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Иногда причина банальна — машинка не получает электричество. Сначала проверьте автомат в щитке и предохранитель. Убедитесь, ��то шнур целый, а розетка рабочая. Для проверки можно включить в неё, например, фен или зарядку. Если другие приборы тоже не работают, значит, проблема не в самой машинке, а в электросети. В простых случаях дост��точно поднять автомат или заменить предохранитель. Если же электричество есть, а техника «��олчит», стоит искать дальше.
+                  Иногда причина банальна — машинка не получает электричество. Сначала проверьте автомат в щитке и предохранитель. Убедитесь, ��то шнур ��елый, а розетка рабочая. Для проверки можно включить в неё, например, фен или зарядку. Если другие приборы тоже не работают, значит, проблема не в самой машинке, а в электросети. В простых случаях дост��точно поднять автомат или заменить предохранитель. Если же электричество есть, а техника «��олчит», стоит искать дальше.
                 </p>
               </div>
             </section>
@@ -890,6 +892,12 @@ const Page = (props) => {
             align-items: center;
             flex-direction: column;
             background-color: #ffffff;
+          }
+          .page-breadcrumbs-section {
+            width: 100%;
+            max-width: 1300px;
+            padding: 0 var(--dl-layout-space-unit);
+            margin: 0 auto;
           }
           .page-header {
             gap: 361px;
@@ -2387,6 +2395,9 @@ const Page = (props) => {
             }
           }
           @media (max-width: 767px) {
+            .page-breadcrumbs-section {
+              padding: 0 var(--dl-layout-space-oneandhalfunits);
+            }
             .page-left-main-box {
               align-items: center;
             }
@@ -2419,6 +2430,9 @@ const Page = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .page-breadcrumbs-section {
+              padding: 0 var(--dl-layout-space-unit);
+            }
             .page-header {
               height: 84px;
             }
@@ -2430,7 +2444,7 @@ const Page = (props) => {
             }
             .page-headertextwashermachine {
               position: relative;
-              margin-top: 85px;
+              margin-top: 53px;
             }
             .page-image1 {
               top: -149px;

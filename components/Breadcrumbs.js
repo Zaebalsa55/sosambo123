@@ -25,7 +25,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
       breadcrumbs.push({ name: '��ыкуп б/у машин', href: '/vikup' })
     }
 
-    // Проблемы стиральных машин
+    // Проблемы с��иральных машин
     const problemPages = {
       '/neslivaetvodu': 'Стиральная машина не сливает воду',
       '/negreetvodu': 'Стиральная м��шина не греет воду',
@@ -62,8 +62,11 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
 
   const breadcrumbs = getBreadcrumbs()
 
-  // Не показываем breadcrumbs на главной стр��нице если там только один элемент
-  if (breadcrumbs.length <= 1) {
+  // Убираем текущую страницу из крошек - показываем только путь к ней
+  const breadcrumbsWithoutCurrent = breadcrumbs.slice(0, -1)
+
+  // Не показываем breadcrumbs если нет предыдущих страниц
+  if (breadcrumbsWithoutCurrent.length === 0) {
     return null
   }
 
@@ -71,21 +74,17 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
     <nav className={`breadcrumbs-container ${style} ${className}`}>
       <div className={`breadcrumbs-wrapper ${isLeft ? 'left' : ''}`}>
         <ol className={`breadcrumbs-list ${isLeft ? 'align-left' : ''}`}>
-          {breadcrumbs.map((item, index) => (
+          {breadcrumbsWithoutCurrent.map((item, index) => (
             <li key={index} className="breadcrumb-item">
-              {index < breadcrumbs.length - 1 ? (
-                <>
-                  <Link href={item.href}>
-                    <a className="breadcrumb-link">{item.name}</a>
-                  </Link>
-                  <span className="breadcrumb-separator">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </span>
-                </>
-              ) : (
-                <span className="breadcrumb-current">{item.name}</span>
+              <Link href={item.href}>
+                <a className="breadcrumb-link">{item.name}</a>
+              </Link>
+              {index < breadcrumbsWithoutCurrent.length - 1 && (
+                <span className="breadcrumb-separator">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
               )}
             </li>
           ))}
@@ -176,16 +175,6 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             align-items: center;
           }
 
-          .breadcrumb-current {
-            color: #495057;
-            font-weight: 500;
-            padding: 2px 4px;
-            max-width: 300px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-family: 'Nunito', sans-serif;
-          }
 
           /* Адаптивность */
           @media (min-width: 488px) {
@@ -208,9 +197,6 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
               font-size: 0.75rem;
             }
 
-            .breadcrumb-current {
-              max-width: 180px;
-            }
 
             .breadcrumb-separator {
               margin: 0 4px;
@@ -240,9 +226,6 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
               font-size: 0.7rem;
             }
 
-            .breadcrumb-current {
-              max-width: 120px;
-            }
 
             .breadcrumb-separator {
               margin: 0 3px;
@@ -257,17 +240,9 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
               padding: 1px 3px;
             }
 
-            /* Компактная версия - по��азываем только последние 2 элемента */
-            .breadcrumb-item:not(:nth-last-child(-n+2)) {
+            /* На очень маленьких экранах показываем только последний элемент */
+            .breadcrumb-item:not(:last-child) {
               display: none;
-            }
-
-            /* Добавляем троеточие в начале на очень маленьких экранах */
-            .breadcrumbs-list::before {
-              content: "...";
-              color: #6c757d;
-              margin-right: 6px;
-              font-size: 0.7rem;
             }
           }
         `}

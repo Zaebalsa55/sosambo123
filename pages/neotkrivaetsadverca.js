@@ -41,6 +41,9 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
+        <div className="page-breadcrumbs-section">
+          <Breadcrumbs style="white-left" />
+        </div>
         <main className="page-main">
           <div className="page-left-main-box">
 
@@ -58,7 +61,6 @@ const Page = (props) => {
                 </span>
                 <span className="page-text13">что делать?</span>
               </h1>
-              <Breadcrumbs style="white-left" className="breadcrumbs-after-title" />
             </div>
             <section className="page-container11">
               <svg
@@ -369,7 +371,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text46 vicetext">
                   {' '}
-                  ��сли слив заблокирован — засорился фильтр, дренажный шланг или сифон — вода остаётся в баке и люк удерживается запертым. Аналоги��но, при пол��мке датчика уровня система может «думать», что вода есть, даже если её визуально нет, и не снимать блокировку. В таких случаях необходима проверка и очистка сливного тракта или диагностика датчика
+                  ��сли слив заблокирован — засорился фильтр, дренажный шланг или сифон — вода остаётся в баке и люк удерживается запертым. Аналоги��но, при пол��мке датчика уровня система может «думать», что вода есть, даж�� если её визуально нет, и не снимать блокировку. В таких случаях необходима проверка и очистка сливного тракта или диагностика датчика
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -629,7 +631,7 @@ const Page = (props) => {
                   strokeDasharray="11 11"
                 ></path>
               </svg>
-              <strong className="page-text58">Работаем без выходны��</strong>
+              <strong className="page-text58">Работаем без ��ыходны��</strong>
               <div className="page-container28">
                 <div className="page-container29">
                   <div className="page-container30">
@@ -659,7 +661,7 @@ const Page = (props) => {
               }}
               nextPage={{
                 href: '/nekrutitbaraban',
-                title: 'Стиральная машина не крутит барабан'
+                title: 'Стиральная машина н�� крутит барабан'
               }}
             />
             <svg
@@ -740,6 +742,12 @@ const Page = (props) => {
             flex-direction: column;
             background-color: #ffffff;
           }
+          .page-breadcrumbs-section {
+            width: 100%;
+            max-width: 1300px;
+            padding: 0 var(--dl-layout-space-unit);
+            margin: 0 auto;
+          }
           .page-header {
             gap: 361px;
             width: 100%;
@@ -793,7 +801,7 @@ const Page = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          @media (max-width: 487px) { .page-headertextwashermachine { margin-top: 85px; } }
+          @media (max-width: 487px) { .page-headertextwashermachine { margin-top: 53px; } }
           .page-image1 {
             width: 50px;
             height: 50px;
@@ -2235,6 +2243,9 @@ const Page = (props) => {
             }
           }
           @media (max-width: 767px) {
+            .page-breadcrumbs-section {
+              padding: 0 var(--dl-layout-space-oneandhalfunits);
+            }
             .page-left-main-box {
               align-items: center;
             }
@@ -2267,6 +2278,9 @@ const Page = (props) => {
             }
           }
           @media (max-width: 479px) {
+            .page-breadcrumbs-section {
+              padding: 0 var(--dl-layout-space-unit);
+            }
             .page-header {
               height: 84px;
             }
