@@ -303,7 +303,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Сначала промойте пятно очень холодной водой, чтобы смыть как можно больше крови. Затем нанесите на влажное место густую мыльную пену – хорошо подходит хозяйственное мыло. Мыло оставляют на 20–30 минут (можно накрыть плёнкой) и снова смывают прохладной водой. Этот простой способ эффективен для свежих и слегка засохших следов. Для более стойких пятен в мыльный раствор можно добавить немного мелкой соли или стирального порошка.
+                  Сначала промойте пятно очень холодной водой, чтобы смыть как можно больше крови. Затем нанесите на влажное место густую мыльную пену – хорошо подходит хозяйственное мыло. Мыло ос��авляют на 20–30 минут (можно накрыть плёнкой) и снова смывают прохладной водой. Этот простой способ эффективен для свежих и слегка засохших следов. Для более стойких пятен в мыльный раствор можно добавить немного мелкой соли или стирального порошка.
                 </p>
               </div>
             </section>
@@ -750,7 +750,7 @@ const Page = (props) => {
               </div>
               <div className="page-frame12982">
                 <span className="page-text74">
-                  Как продлить жизнь машине на 3–5 лет — простые привычки,
+                  Как продлить жизн�� машине на 3–5 лет — простые привычки,
                   которые сэкономят деньги
                 </span>
                 <div className="page-container46"></div>
@@ -828,7 +828,7 @@ const Page = (props) => {
             justify-content: center;
           }
           .page-left-main-box {
-            gap: var(--dl-layout-space-oneandhalfunits);
+            gap: 0;
             width: 100%;
             height: 100%;
             display: flex;
@@ -838,6 +838,14 @@ const Page = (props) => {
             padding-right: var(--dl-layout-space-unit);
             flex-direction: column;
             justify-content: flex-start;
+          }
+
+          .page-left-main-box > *:not(:first-child) {
+            margin-top: var(--dl-layout-space-oneandhalfunits);
+          }
+
+          .page-container11 {
+            margin-top: 8px !important;
           }
           .page-headertextwashermachine {
             width: 100%;
@@ -884,7 +892,7 @@ const Page = (props) => {
             max-width: 586px;
             min-width: 290px;
             box-shadow: 0px 0px 20px 3px #d4d4d4;
-            margin-top: var(--dl-layout-space-unit);
+            margin-top: 8px;
             align-items: flex-start;
             padding-top: var(--dl-layout-space-unit);
             border-radius: var(--dl-layout-radius-imageradius);

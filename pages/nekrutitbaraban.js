@@ -281,7 +281,7 @@ const Page = (props) => {
               <div className="page-container17">
                 <div className="vicetext">
                   <p>
-                    <strong>1. Обесточьте машину и слейте воду.</strong><br />
+                    <strong>1. ��бесточьте машину и слейте воду.</strong><br />
                     Выключите стиральную машину и отключите её от сети. Слейте
                     воду из барабана с помощью аварийного шланга или через
                     фильтр (если таковой имеется). ��то необходимо сделать перед
@@ -371,7 +371,7 @@ const Page = (props) => {
                   {' '}
                   Если люк не закрыт «до щелчка» или что-то мешает защёлке —
                   например, тка���� прилипла к уплотнител�� — машина распознает это
-                  как неисправность и не запустит программу; отсутствие
+                  как не��справность и не запустит программу; отсутствие
                   характерного щелч���� или свобод��о болтающаяс�� дверца могут
                   указывать на механическую поломку замка. В таких случаях нужно
                   убедиться, что люк закрыт плотно и ничего не зажато; при
@@ -418,7 +418,7 @@ const Page = (props) => {
                 <p className="vicetext">
                   {' '}
                   Если двигатель работает, слышен гул, н�� барабан не вращ��ется
-                  или вращается вяло, вероятно, слетел или порван приводной
+                  или вращается вяло, ве��оятно, слетел или порван приводной
                   ремень; при этом машина может выполнять другие эт���пы цик����
                   (налив, нагрев), но не передавать вращение на барабан. В таких
                   ситуациях при доступе к задней панели можно визуально
@@ -852,7 +852,7 @@ const Page = (props) => {
             justify-content: center;
           }
           .page-left-main-box {
-            gap: var(--dl-layout-space-oneandhalfunits);
+            gap: 0;
             width: 100%;
             height: 100%;
             display: flex;
@@ -862,6 +862,14 @@ const Page = (props) => {
             padding-right: var(--dl-layout-space-unit);
             flex-direction: column;
             justify-content: flex-start;
+          }
+
+          .page-left-main-box > *:not(:first-child) {
+            margin-top: var(--dl-layout-space-oneandhalfunits);
+          }
+
+          .page-container11 {
+            margin-top: 8px !important;
           }
           .page-headertextwashermachine {
             width: 100%;
@@ -908,7 +916,7 @@ const Page = (props) => {
             max-width: 586px;
             min-width: 290px;
             box-shadow: 0px 0px 20px 3px #d4d4d4;
-            margin-top: var(--dl-layout-space-unit);
+            margin-top: 8px;
             align-items: flex-start;
             padding-top: var(--dl-layout-space-unit);
             border-radius: var(--dl-layout-radius-imageradius);

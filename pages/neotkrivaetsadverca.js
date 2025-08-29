@@ -26,7 +26,7 @@ const Page = (props) => {
   const baseUrl = 'https://remstirmash.od.ua'
   const structuredData = getProblemPageStructuredData(
     'Ремонт заблокированной две��цы стиральной машины',
-    'Профессиональный ремонт заблокированной дверцы стиральной машины в Одессе. Ремонт замка люка, разблокировка.',
+    'Профессиональный ремонт заблокированно�� дверцы стиральной машины в Одессе. Ремонт замка люка, разблокировка.',
     `${baseUrl}/neotkrivaetsadverca`
   )
 
@@ -294,7 +294,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Многие модели оснащены функцией «Child Lock», которая предотвращает случайное открытие люка в�� время работы. Если эта блокировка активна, дверца не откроется, и на панели обычно горит ��оответствующая пиктограмма. В таком случае нужно отключить функцию в соответствии с инструкцией к вашей модели — не пытайтесь тянуть дверцу силой, сначала снимит�� защиту.
+                  Многие модели оснащены функцией «Child Lock», которая предотвращает случайное открытие люка в�� время работы. Если эта блокировка активна, дверца не откроется, и на панели обычно горит ��оответствующая пикт��грамма. В таком случае нужно отключить функцию в соответствии с инструкцией к вашей модели — не пытайтесь тянуть дверцу силой, сначала снимит�� защиту.
                 </p>
               </div>
             </section>
@@ -413,7 +413,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text49 vicetext">
                   {' '}
-                  Внезапные перебои с питанием или ошибки в модуле управления могут приводить к «замораживанию» замка люка: контроллер просто не получает и��и не обрабатывает команду н�� разблокир��в��у. Иногда помогает полная перезагрузка питания, в иных случаях требуется диагностика и ремонт электронной час��и в сервисном центре.
+                  Внезапные перебои с питанием или ошибки в модуле управления могут приводить к «замораживанию» замка люка: контроллер просто не получает и��и не обрабатывает команду н�� разблокир��в��у. Иногда помогает полная перезагрузка питания, в иных случаях требуе��ся диагностика и ремонт электронной час��и в сервисном центре.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -708,7 +708,7 @@ const Page = (props) => {
               <div className="page-frame12984">
                 <span className="page-text76">
                   Как сэкономить электричество и воду — реальные настройки и
-                  лайфхаки
+                  лайфхак��
                 </span>
                 <div className="page-container48"></div>
               </div>
@@ -768,7 +768,7 @@ const Page = (props) => {
             justify-content: center;
           }
           .page-left-main-box {
-            gap: var(--dl-layout-space-oneandhalfunits);
+            gap: 0;
             width: 100%;
             height: 100%;
             display: flex;
@@ -778,6 +778,14 @@ const Page = (props) => {
             padding-right: var(--dl-layout-space-unit);
             flex-direction: column;
             justify-content: flex-start;
+          }
+
+          .page-left-main-box > *:not(:first-child) {
+            margin-top: var(--dl-layout-space-oneandhalfunits);
+          }
+
+          .page-container11 {
+            margin-top: 8px !important;
           }
           .page-headertextwashermachine {
             width: 100%;
@@ -825,7 +833,7 @@ const Page = (props) => {
             max-width: 586px;
             min-width: 290px;
             box-shadow: 0px 0px 20px 3px #d4d4d4;
-            margin-top: var(--dl-layout-space-unit);
+            margin-top: 8px;
             align-items: flex-start;
             padding-top: var(--dl-layout-space-unit);
             border-radius: var(--dl-layout-radius-imageradius);

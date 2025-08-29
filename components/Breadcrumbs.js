@@ -28,7 +28,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
     // Проблемы стиральных машин
     const problemPages = {
       '/neslivaetvodu': 'Стиральная машина не сливает воду',
-      '/negreetvodu': 'Стиральная машина не греет воду',
+      '/negreetvodu': 'Стиральная м��шина не греет воду',
       '/protekaet': 'Стиральная машина протекает',
       '/silnoshumit': 'С��иральная машина шумит при отжиме',
       '/nevkluchaetsa': 'Стиральн��я машина не включается',
@@ -48,7 +48,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
     const generalArticles = {
       '/jirniepyatna': 'Как избавиться от жирных пятен на одежде',
       '/jvachka': 'Как самостоятельно удалить жвачку с одежды',
-      '/vlapalisvkrov': 'Как удалить пятна крови с одежды',
+      '/vlapalisvkrov': 'Как удалить пятна крови с одеж��ы',
       '/puhovik': 'Как правильно стирать пуховик'
     }
 
@@ -134,7 +134,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             margin: 0;
             padding: 0;
             flex-wrap: wrap;
-            gap: 4px;
+            gap: 2px;
             justify-content: center;
           }
 
@@ -150,7 +150,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
           .breadcrumb-item {
             display: flex;
             align-items: center;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-family: 'Nunito', sans-serif;
           }
 
@@ -158,7 +158,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             color: #4EC8ED;
             text-decoration: none;
             transition: color 0.2s ease;
-            padding: 4px 8px;
+            padding: 2px 4px;
             border-radius: 4px;
             transition: all 0.2s ease;
             font-family: 'Nunito', sans-serif;
@@ -171,7 +171,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
 
           .breadcrumb-separator {
             color: #6c757d;
-            margin: 0 8px;
+            margin: 0 4px;
             display: flex;
             align-items: center;
           }
@@ -179,7 +179,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
           .breadcrumb-current {
             color: #495057;
             font-weight: 500;
-            padding: 4px 8px;
+            padding: 2px 4px;
             max-width: 300px;
             overflow: hidden;
             text-overflow: ellipsis;

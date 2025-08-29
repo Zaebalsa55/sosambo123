@@ -27,7 +27,7 @@ const Page = (props) => {
   const baseUrl = 'https://remstirmash.od.ua'
   const structuredData = getProblemPageStructuredData(
     'Ремонт стиральной машины которая не н��бирает воду',
-    'Профессиональный ремонт стир��льных машин которые не набирают воду в Одессе. Чистка фильтров, ремонт клапанов.',
+    'Профессиональный ремонт стир��льных машин которые не набирают во��у в Одессе. Чистка фильтров, ремонт клапанов.',
     `${baseUrl}/nenabiraetvodu`
   )
 
@@ -335,7 +335,7 @@ const Page = (props) => {
             </section>
             <div className="page-container15">
               <h2 className="page-text34">
-                <span>Основны�� пр��чины поломки:</span>
+                <span>Основны�� пр��ч��ны поломки:</span>
                 <br></br>
               </h2>
             </div>
@@ -424,7 +424,7 @@ const Page = (props) => {
             <section id="4" className="page-fiveproblem1">
               <div className="page-container22 zagolovkiskorobkoy">
                 <h3 className="zagolovki2">
-                  3. Пережат или перекручен заливной шл��нг
+                  3. Пережат или перекруче�� заливной шл��нг
                 </h3>
                 <svg
                   width="330"
@@ -544,7 +544,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text49 vicetext">
                   {' '}
-                  Прессостат ��� да��чик, определяющий уровень воды в баке. Если прессостат «залип» (считал бак полным) или вышел из строя, машина не начнёт зали�� воды вообще. Симптомы сх��жи с клапаном: люк блокируется, но залива нет, появляется ошибка «набор воды» или «прессостат» на дисплее. Иногда вода может сливаться сразу, создаётся ложная сигнализация об избыточном уровне. Пользователь может прове��ить шланг прессостата на засор (и прочистить его), но обычно требуется замена датчика.
+                  Прессостат ��� да��чик, определяющий уровень воды в баке. Если прессостат «залип» (считал бак полным) или вышел из строя, машина не начнёт зали�� воды вообще. Симптомы сх��жи с клапаном: л��к блокируется, но залива нет, появляется ошибка «набор воды» или «прессостат» на дисплее. Иногда вода может сливаться сразу, создаётся ложная сигнализация об избыточном уровне. Пользователь может прове��ить шланг прессостата на засор (и прочистить его), но обычно требуется замена датчика.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -908,7 +908,7 @@ const Page = (props) => {
             justify-content: center;
           }
           .page-left-main-box {
-            gap: var(--dl-layout-space-oneandhalfunits);
+            gap: 0;
             width: 100%;
             height: 100%;
             display: flex;
@@ -918,6 +918,14 @@ const Page = (props) => {
             padding-right: var(--dl-layout-space-unit);
             flex-direction: column;
             justify-content: flex-start;
+          }
+
+          .page-left-main-box > *:not(:first-child) {
+            margin-top: var(--dl-layout-space-oneandhalfunits);
+          }
+
+          .page-container11 {
+            margin-top: 8px !important;
           }
           .page-headertextwashermachine {
             width: 100%;
@@ -964,7 +972,7 @@ const Page = (props) => {
             max-width: 586px;
             min-width: 290px;
             box-shadow: 0px 0px 20px 3px #d4d4d4;
-            margin-top: var(--dl-layout-space-unit);
+            margin-top: 8px;
             align-items: flex-start;
             padding-top: var(--dl-layout-space-unit);
             border-radius: var(--dl-layout-radius-imageradius);
