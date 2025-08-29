@@ -48,7 +48,7 @@ const Articles = (props) => {
       alt: "Стиральная машина не нагревает воду"
     },
     {
-      title: "Стиральная машина протекает",
+      title: "Стиральная машина проте��ает",
       href: "/protekaet", 
       image: "/problems 2/31-300h.webp",
       alt: "Стиральная машина протекает"
@@ -132,13 +132,12 @@ const Articles = (props) => {
     <>
       <main className="articles-container">
         <SEOHead
-          title="Статьи о ремонте стиральных машин и уходе за одеждой | РемСтирМаш Одесса"
+          title="Статьи о ремонте стиральных машин и уходе за одеждой | РемСтирМаш Од��сса"
           description="Полезные статьи о ремонте стиральных машин и уходе за одеждой. Решения проблем, советы по стирке и выведению пятен."
           keywords="статьи, ремонт стиральных машин, уход за одеждой, пятна, стирка, Одесса"
           canonical={`${baseUrl}/articles`}
         />
         <Header />
-        <Breadcrumbs />
 
         {/* Заголовок страницы */}
         <section className="articles-hero">
@@ -149,6 +148,8 @@ const Articles = (props) => {
             </p>
           </div>
         </section>
+
+        <Breadcrumbs style="white-left" />
 
         {/* Переключатель типов статей */}
         <section className="articles-switcher-section">
@@ -458,8 +459,25 @@ const Articles = (props) => {
 
           /* Адаптивность */
           @media (max-width: 768px) {
+            .articles-container {
+              background-color: white;
+            }
+
+            .articles-hero {
+              background: white;
+              color: #232020;
+              padding: 40px 15px 30px;
+              margin-top: 90px;
+            }
+
             .articles-main-title {
               font-size: 2.5rem;
+              color: #232020;
+            }
+
+            .articles-subtitle {
+              color: #666;
+              opacity: 1;
             }
 
             .articles-tabs {
@@ -481,6 +499,7 @@ const Articles = (props) => {
 
             .articles-switcher-section {
               padding: 30px 15px 15px;
+              background-color: white;
             }
 
             .articles-cards-grid {
@@ -490,10 +509,7 @@ const Articles = (props) => {
 
             .articles-section {
               padding: 30px 15px 60px;
-            }
-
-            .articles-hero {
-              padding: 40px 15px 30px;
+              background-color: white;
             }
 
             .floating-card {
@@ -502,8 +518,24 @@ const Articles = (props) => {
           }
 
           @media (max-width: 480px) {
+            .articles-container {
+              background-color: white;
+            }
+
+            .articles-hero {
+              background: white;
+              color: #232020;
+              margin-top: 90px;
+            }
+
             .articles-main-title {
               font-size: 2rem;
+              color: #232020;
+            }
+
+            .articles-subtitle {
+              color: #666;
+              opacity: 1;
             }
 
             .tab-button {

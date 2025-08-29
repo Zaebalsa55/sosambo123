@@ -7,6 +7,7 @@ import SEOHead from '../components/SEOHead'
 import PageNavigation from '../components/PageNavigation'
 import OrderButton from '../components/OrderButton'
 import OrderModal from '../components/OrderModal'
+import Breadcrumbs from '../components/Breadcrumbs'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
@@ -39,14 +40,10 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
+        <Breadcrumbs style="white-left" />
         <main className="page-main">
           <div className="page-left-main-box">
             <div className="page-headertextwashermachine">
-              <img
-                alt="image"
-                src="/group%20385-200h.png"
-                className="page-image1"
-              />
               <h1 className="page-text10">
                 <span className="page-text11">
                   У стиральной машины не открывается дверца —
@@ -370,7 +367,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text46 vicetext">
                   {' '}
-                  ��сли слив заблокирован — засорился фильтр, дренажный шланг или сифон — вода остаётся в баке и люк удерживается запертым. Аналоги��но, при поломке датчика уровня система может «думать», что вода есть, даже если её визуально нет, и не снимать блокировку. В таких случаях необходима проверка и очистка сливного тракта или диагностика датчика
+                  ��сли слив заблокирован — засорился фильтр, дренажный шланг или сифон — вода остаётся в баке и люк удерживается запертым. Аналоги��но, при пол��мке датчика уровня система может «думать», что вода есть, даже если её визуально нет, и не снимать блокировку. В таких случаях необходима проверка и очистка сливного тракта или диагностика датчика
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -746,7 +743,7 @@ const Page = (props) => {
               </div>
               <div className="page-frame12982">
                 <span className="page-text74">
-                  Как продлить жизнь машине на 3–5 лет — простые привычки,
+                  К��к продлить жизнь машине на 3–5 лет — простые привычки,
                   которые сэкономят деньги
                 </span>
                 <div className="page-container46"></div>
@@ -2322,7 +2319,6 @@ const Page = (props) => {
             }
             .page-headertextwashermachine {
               position: relative;
-              margin-top: var(--dl-layout-space-fiveunits);
             }
             .page-image1 {
               top: -149px;

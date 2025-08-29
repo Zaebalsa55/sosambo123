@@ -29,14 +29,7 @@ const Vikup = (props) => {
           structuredData={structuredData}
         />
         <Header />
-        <Breadcrumbs />
-        <div className="page1-headertextwashermachine">
-          <img
-            alt="image"
-            src="/group%20385-200h.png"
-            className="page1-image1"
-          />
-        </div>
+        <Breadcrumbs style="white-left" />
         <div className="page1-main-posle-hedera">
           <div className="page1-container11">
             <div className="page1-container12">
@@ -108,7 +101,7 @@ const Vikup = (props) => {
                 </p>
               </div>
               <img
-                alt="мастер по ремонту стиральных машин жмет руку покупателю"
+                alt="мастер п�� ремонту стиральных машин жмет руку покупателю"
                 src="/vikupsochi-1500w.webp"
                 loading="eager"
                 className="page1-image2"

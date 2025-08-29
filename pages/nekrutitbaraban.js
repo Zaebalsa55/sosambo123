@@ -7,6 +7,7 @@ import SEOHead from '../components/SEOHead'
 import PageNavigation from '../components/PageNavigation'
 import OrderButton from '../components/OrderButton'
 import OrderModal from '../components/OrderModal'
+import Breadcrumbs from '../components/Breadcrumbs'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
@@ -39,14 +40,10 @@ const Page = (props) => {
           structuredData={structuredData}
         />
         <Header />
+        <Breadcrumbs style="white-left" />
         <main className="page-main">
           <div className="page-left-main-box">
             <div className="page-headertextwashermachine">
-              <img
-                alt="image"
-                src="/group%20385-200h.png"
-                className="page-image1"
-              />
               <h1 className="page-text10">
                 <span className="page-text11">
                   Стиральная машина не ��рутит барабан —
@@ -296,7 +293,7 @@ const Page = (props) => {
                     Откройте дверцу и выньте часть белья. При необходимости
                     уменьшите загрузку, если она была слишком большой. Если
                     белья совсем мало, добавьте ещё 2–3 вещи равного веса.
-                    Встряхните оставшиеся вещи, равномерно распределив их по
+                    ��стряхните оставшиеся вещи, равномерно распределив их по
                     барабану.
                   </p>
 
@@ -336,7 +333,7 @@ const Page = (props) => {
             <section id="2" className="page-thirdproblem1">
               <div className="page-container16 zagolovkiskorobkoy">
                 <h3 className="zagolovki2">
-                  1. Дверца не закрыта или не заблокирована.
+                  1. Дверца не закр��та или не заблокирована.
                 </h3>
                 <svg
                   width="330"
@@ -372,7 +369,7 @@ const Page = (props) => {
                 <p className="vicetext">
                   {' '}
                   Если люк не закрыт «до щелчка» или что-то мешает защёлке —
-                  например, ткан�� прилипла к уплотнителю — машина распознает это
+                  например, тка���� прилипла к уплотнителю — машина распознает это
                   как неисправность и не запустит программу; отсутствие
                   характерного щелч���� или свобод��о болтающаяс�� дверца могут
                   указывать на механическую поломку замка. В таких случаях нужно
@@ -476,7 +473,7 @@ const Page = (props) => {
                   барабана, а при серьёзном ��овреждении обмоток возможен и
                   полный отказ. При подозрении на изн��с щёток или внутренние
                   проблемы мотор�� самостоятельный р��монт не рекомендуется —
-                  точную диагн��стику и замену выполняет мастер, который проверит
+                  точную диагн��стику и замену выполняет мастер, который пров��рит
                   состояние щёток, обмоток и подшипников и при необходимости
                   выполнит квалифицированную замену.
                   <span
@@ -2399,7 +2396,6 @@ const Page = (props) => {
             }
             .page-headertextwashermachine {
               position: relative;
-              margin-top: var(--dl-layout-space-fiveunits);
             }
             .page-image1 {
               top: -149px;

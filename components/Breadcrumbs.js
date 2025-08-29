@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const Breadcrumbs = ({ customItems = null }) => {
+const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) => {
   const router = useRouter()
   const pathname = router.pathname
 
@@ -19,7 +19,7 @@ const Breadcrumbs = ({ customItems = null }) => {
       breadcrumbs.push({ name: 'Статьи', href: '/articles' })
     }
 
-    // Выкуп б/у машин
+    // Вык��п б/у машин
     if (pathname === '/vikup') {
       breadcrumbs.push({ name: 'Выкуп б/у машин', href: '/vikup' })
     }
@@ -67,7 +67,7 @@ const Breadcrumbs = ({ customItems = null }) => {
   }
 
   return (
-    <nav className="breadcrumbs-container">
+    <nav className={`breadcrumbs-container ${style} ${className}`}>
       <div className="breadcrumbs-wrapper">
         <ol className="breadcrumbs-list">
           {breadcrumbs.map((item, index) => (
@@ -99,10 +99,28 @@ const Breadcrumbs = ({ customItems = null }) => {
             padding: 12px 0;
           }
 
+          /* Стиль с белым фоном и выравниванием слева */
+          .breadcrumbs-container.white-left {
+            background-color: white;
+            border-bottom: 1px solid #dee2e6;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          }
+
+          .breadcrumbs-container.white-left .breadcrumbs-wrapper {
+            text-align: left;
+            padding: 0 30px;
+          }
+
+          .breadcrumbs-container.white-left .breadcrumbs-list {
+            justify-content: flex-start;
+          }
+
           .breadcrumbs-wrapper {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
+            text-align: center;
           }
 
           .breadcrumbs-list {
@@ -113,6 +131,7 @@ const Breadcrumbs = ({ customItems = null }) => {
             padding: 0;
             flex-wrap: wrap;
             gap: 4px;
+            justify-content: center;
           }
 
           .breadcrumb-item {
@@ -155,26 +174,9 @@ const Breadcrumbs = ({ customItems = null }) => {
 
           /* Адаптивность */
           @media (max-width: 768px) {
-            .breadcrumbs-wrapper {
-              padding: 0 15px;
-            }
-
-            .breadcrumb-item {
-              font-size: 0.85rem;
-            }
-
-            .breadcrumb-current {
-              max-width: 200px;
-            }
-
-            .breadcrumb-separator {
-              margin: 0 6px;
-            }
-          }
-
-          @media (max-width: 480px) {
             .breadcrumbs-container {
               padding: 8px 0;
+              margin-top: 85px;
             }
 
             .breadcrumbs-wrapper {
@@ -182,19 +184,69 @@ const Breadcrumbs = ({ customItems = null }) => {
             }
 
             .breadcrumb-item {
-              font-size: 0.8rem;
+              font-size: 0.75rem;
             }
 
             .breadcrumb-current {
-              max-width: 150px;
+              max-width: 180px;
             }
 
             .breadcrumb-separator {
               margin: 0 4px;
             }
 
+            .breadcrumb-separator svg {
+              width: 12px;
+              height: 12px;
+            }
+
             .breadcrumb-link {
-              padding: 2px 6px;
+              padding: 2px 4px;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .breadcrumbs-container {
+              padding: 6px 0;
+              margin-top: 85px;
+            }
+
+            .breadcrumbs-wrapper {
+              padding: 0 10px;
+            }
+
+            .breadcrumb-item {
+              font-size: 0.7rem;
+            }
+
+            .breadcrumb-current {
+              max-width: 120px;
+            }
+
+            .breadcrumb-separator {
+              margin: 0 3px;
+            }
+
+            .breadcrumb-separator svg {
+              width: 10px;
+              height: 10px;
+            }
+
+            .breadcrumb-link {
+              padding: 1px 3px;
+            }
+
+            /* Компактная версия - показываем только последние 2 элемента */
+            .breadcrumb-item:not(:nth-last-child(-n+2)) {
+              display: none;
+            }
+
+            /* Добавляем троеточие в начале на очень маленьких экранах */
+            .breadcrumbs-list::before {
+              content: "...";
+              color: #6c757d;
+              margin-right: 6px;
+              font-size: 0.7rem;
             }
           }
         `}
