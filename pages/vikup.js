@@ -1479,7 +1479,6 @@ const Vikup = (props) => {
             }
             .page1-headertextwashermachine {
               position: relative;
-              margin-top: var(--dl-layout-space-fiveunits);
             }
             .page1-image1 {
               top: -149px;

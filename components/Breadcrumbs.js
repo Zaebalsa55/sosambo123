@@ -21,7 +21,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
 
     // Вык��п б/у машин
     if (pathname === '/vikup') {
-      breadcrumbs.push({ name: 'Выкуп б/у машин', href: '/vikup' })
+      breadcrumbs.push({ name: '��ыкуп б/у машин', href: '/vikup' })
     }
 
     // Проблемы стиральных машин
@@ -30,7 +30,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
       '/negreetvodu': 'Стиральная машина не греет воду',
       '/protekaet': 'Стиральная машина протекает',
       '/silnoshumit': 'Стиральная машина шумит при отжиме',
-      '/nevkluchaetsa': 'Стиральная машина не включается',
+      '/nevkluchaetsa': 'Стиральн��я машина не включается',
       '/zavisaetnaprogramme': 'Стиральная машина зависает на программе',
       '/neotjimaet': 'Стиральная машина не отжимает',
       '/nenabiraetvodu': 'Стиральная машина не набирает воду',
@@ -94,17 +94,17 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
       <style jsx>
         {`
           .breadcrumbs-container {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e9ecef;
+            background-color: transparent;
+            border-bottom: none;
             padding: 12px 0;
           }
 
-          /* Стиль с белым фоном и выравниванием слева */
+          /* Стиль с выравниванием слева */
           .breadcrumbs-container.white-left {
-            background-color: white;
-            border-bottom: 1px solid #dee2e6;
+            background-color: transparent;
+            border-bottom: none;
             padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: none;
           }
 
           .breadcrumbs-container.white-left .breadcrumbs-wrapper {
@@ -138,7 +138,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             display: flex;
             align-items: center;
             font-size: 0.9rem;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Nunito', sans-serif;
           }
 
           .breadcrumb-link {
@@ -148,6 +148,7 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             padding: 4px 8px;
             border-radius: 4px;
             transition: all 0.2s ease;
+            font-family: 'Nunito', sans-serif;
           }
 
           .breadcrumb-link:hover {
@@ -170,10 +171,17 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            font-family: 'Nunito', sans-serif;
           }
 
           /* Адаптивность */
-          @media (max-width: 768px) {
+          @media (min-width: 488px) {
+            .breadcrumbs-container {
+              margin-top: 20px;
+            }
+          }
+
+          @media (max-width: 487px) {
             .breadcrumbs-container {
               padding: 8px 0;
               margin-top: 85px;
