@@ -20,14 +20,14 @@ const Breadcrumbs = ({ customItems = null, style = 'default', className = '' }) 
       breadcrumbs.push({ name: 'Статьи', href: '/articles' })
     }
 
-    // Вык��п б/у машин
+    // Выкуп б/у машин
     if (pathname === '/vikup') {
-      breadcrumbs.push({ name: '��ыкуп б/у машин', href: '/vikup' })
+      breadcrumbs.push({ name: 'Выкуп б/у машин', href: '/vikup' })
     }
 
     // Проблемы с��иральных машин
     const problemPages = {
-      '/neslivaetvodu': 'Стиральная машина не сливает воду',
+      '/neslivaetvodu': 'Стиральная машина не сли��ает воду',
       '/negreetvodu': 'Стиральная м��шина не греет воду',
       '/protekaet': 'Стиральная машина протекает',
       '/silnoshumit': 'С��иральная машина шумит при отжиме',

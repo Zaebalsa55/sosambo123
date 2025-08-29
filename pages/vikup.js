@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
@@ -10,9 +10,22 @@ import { getServiceData, getLocalBusinessData, getBreadcrumbData } from '../util
 
 const Vikup = (props) => {
   const [isSellModalOpen, setIsSellModalOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   const openSellModal = () => setIsSellModalOpen(true)
   const closeSellModal = () => setIsSellModalOpen(false)
+
+  useEffect(() => {
+    const update = () => setIsMobile(window.innerWidth < 767)
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
+
+  const truncate = (text, max) => {
+    if (typeof text !== 'string') return ''
+    return text.length > max ? text.slice(0, max - 1).trimEnd() + '…' : text
+  }
 
   const seoData = getSEOData('/vikup')
   const baseUrl = 'https://remstirmash.od.ua'
@@ -121,7 +134,7 @@ const Vikup = (props) => {
             </div>
             <div className="page1-container14">
               <h2 className="page1-text26">
-                <span>Почему луч��е не выбрасывать</span>
+                <span>Почем�� луч��е не выбрасывать</span>
                 <br></br>
               </h2>
             </div>
@@ -130,11 +143,11 @@ const Vikup = (props) => {
                 <img
                   alt="image"
                   src="/ICONS/23222.svg"
-                  loading="lazy"
+                  loading="eager"
                   className="page1-image3"
                 />
                 <div className="page1-container17">
-                  <h3 className="page1-text29">Экономия времени</h3>
+                  <h3 className="page1-text29">{isMobile ? (<><span>Вместо ��усора –</span><br/>польза</>) : 'Вместо мусора – польза'}</h3>
                   <svg
                     width="100%"
                     xmlns="http://www.w3.org/2000/svg"
@@ -165,20 +178,18 @@ const Vikup = (props) => {
                       strokeDasharray="11 11"
                     ></path>
                   </svg>
-                  <p className="page1-text30">
-                    Мы сами приезжаем, аккуратно выносим
-                  </p>
+                  <p className="page1-text30">{isMobile ? truncate('Мы выкупим вашу машинку и используем её на благо другим', 160) : 'Мы выкупим вашу машинку и используем её на благо другим'}</p>
                 </div>
               </div>
               <div className="page1-container18">
                 <img
                   alt="image"
                   src="/ICONS/res3.svg"
-                  loading="lazy"
+                  loading="eager"
                   className="page1-image4"
                 />
                 <div className="page1-container19">
-                  <h3 className="page1-text31">Вместо мусора – польза</h3>
+                  <h3 className="page1-text31">{isMobile ? (<><span>Экономия</span><br/>времени</>) : 'Экономия времени'}</h3>
                   <svg
                     width="100%"
                     xmlns="http://www.w3.org/2000/svg"
@@ -209,22 +220,19 @@ const Vikup = (props) => {
                       strokeDasharray="11 11"
                     ></path>
                   </svg>
-                  <p className="page1-text32">
-                    Мы выкупим вашу машинку и используем её на благо другим
-                  </p>
+                  <p className="page1-text32">{isMobile ? truncate('Мы сами приезжаем, аккуратно выносим', 160) : 'Мы сами приезжаем, аккуратно выносим'}</p>
                 </div>
               </div>
               <div className="page1-container20">
                 <img
                   alt="image"
                   src="/ICONS/zamena1.svg"
-                  loading="lazy"
+                  loading="eager"
                   className="page1-image5"
                 />
                 <div className="page1-container21">
                   <h3 className="page1-text33">
-                    <span>Оплата наличными</span>
-                    <br></br>
+                    {isMobile ? (<><span>Оплат��</span><br/>наличными</>) : (<><span>Оплата наличными</span><br></br></>)}
                   </h3>
                   <svg
                     width="100%"
@@ -256,9 +264,7 @@ const Vikup = (props) => {
                       strokeDasharray="11 11"
                     ></path>
                   </svg>
-                  <p className="page1-text36">
-                    Вы получаете реальную выгоду — деньги сразу на месте
-                  </p>
+                  <p className="page1-text36">{isMobile ? truncate('Вы получаете реальную выгоду — деньги сразу на месте', 160) : 'Вы получаете реальную выгоду — деньги сразу на месте'}</p>
                 </div>
               </div>
               <svg
@@ -1528,6 +1534,16 @@ const Vikup = (props) => {
               font-style: normal;
               font-weight: 500;
             }
+            .page1-text29,
+            .page1-text31,
+            .page1-text33 {
+              max-width: 150px;
+            }
+            .page1-text30,
+            .page1-text32,
+            .page1-text36 {
+              max-width: 160px;
+            }
           }
           @media (max-width: 767px) {
             .page1-breadcrumbs-section {
@@ -1630,7 +1646,7 @@ const Vikup = (props) => {
               height: 36px;
             }
             .page1-text36 {
-              max-width: 165px;
+              max-width: 160px;
             }
             .page1-text37 {
               width: auto;
